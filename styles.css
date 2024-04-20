@@ -1,0 +1,178 @@
+@font-face {
+    font-family: Bakudai-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Regular.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: B2Hana-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/max-hana@1.1/webfont/B2Hana-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/max-hana@1.1/webfont/B2Hana-Regular.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: Bakudai-Medium;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Medium.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: masafont-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: "JasonHandwriting1-Regular";
+    src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting1-Regular.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: "JasonHandwriting2-Regular";
+    src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting2-Regular.woff2) format("woff2");
+  }
+  
+  
+  body {
+    /* font-family: 'Roboto', Arial, sans-serif; */
+  
+    /* font-family: 'Noto Serif CJK SC', serif; */
+    font-family: 'Bakudai-Regular', sans-serif;
+    /* font-family: 'B2Hana-Regular', sans-serif; */
+  
+    /* Ensured Roboto is primarily used */
+    /* background: url('https://source.unsplash.com/1600x900/?floral') no-repeat center center fixed; */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  
+  header h1 {
+    margin: 0;
+    color: #5e5e5e;
+    font-family: 'JasonHandwriting1-Regular', sans-serif;
+    /* Uses Bakudai-Regular font */
+    /* font-weight: bold; */
+    font-size: 48px;
+    /* Set the font size to 36 pixels */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .hero {
+    text-align: center;
+    /* Center-aligns content within the hero section */
+  }
+  
+  .caption {
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 100%;
+    /* Ensures the caption stretches across the full width of the hero section */
+    text-align: center;
+    /* Center-aligns the text within the caption */
+    margin-bottom: 20px;
+    /* Adds space between the caption and the image */
+    opacity: 0;
+    /* Start fully transparent */
+    transition: opacity 1s ease-in-out;
+    /* Smooth transition for opacity */
+  }
+  
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Ensures the image takes up the full width of its container */
+  }
+  
+  
+  .row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* Added for responsiveness */
+  }
+  
+  .tile {
+    width: 23%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    /* Added margin for spacing between tiles */
+  }
+  
+  .tile span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    font-family: 'JasonHandwriting1-Regular', sans-serif;
+  
+    font-size: 17px;
+  }
+  
+  footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  
+    font-family: 'JasonHandwriting1-Regular', sans-serif;
+  
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  footer ul.social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul.social-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #6a8caf;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    color: #ff6f61;
+  }
