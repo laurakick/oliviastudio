@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>花藝課堂首頁</title>
+  <title>奧莉花藝</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet"
@@ -15,7 +15,17 @@
 
 <body>
   <header>
-    <h1>奧莉花藝</h1>
+    <style>
+        h1 img {
+            width: 30%;
+            height: auto;
+        }
+
+    </style>
+
+      <h1>
+        <img src="image/olivia_logo_rect.png" alt="奧莉花藝">
+      </h1>
     <nav>
       <ul>
         <li><a href="#teachers">教師資料</a></li>
@@ -34,30 +44,35 @@
       style="background-image: url('https://via.placeholder.com/200x200.png?text=教師簡歷');">
       <span>教師簡歷</span>
     </div> -->
-    <div class="tile" onclick="location.href='#teachers';"
-    style="background-image: url('image/Olivia_Teacher.png');">
-    <span>教師簡歷</span>
-    </div>    
-    <div class="tile" onclick="location.href='#courses';"
-    style="background-image: url('image/S__14352438.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <span>課程資訊</span>
+    <div class="tile" onclick="location.href='#teachers';" style="background-image: url('image/Olivia_Teacher.png');">
+        <div class="tile-content">
+            <span>教師簡歷</span>
+        </div>
     </div>
-    <div class="tile" onclick="location.href='#students';"
-    style="background-image: url('image/S__14352439.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <span>學生作品</span>
+    <div class="tile" onclick="location.href='#courses';" style="background-image: url('image/S__14352438.jpg');">
+        <div class="tile-content">
+            <span>課程資訊</span>
+        </div>
     </div>
-    <div class="tile" onclick="location.href='#news';"
-    style="background-image: url('image/S__14352440.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-       <span>最新消息</span>
+    <div class="tile" onclick="location.href='#students';" style="background-image: url('image/S__14352439.jpg');">
+        <div class="tile-content">
+            <span>學生作品</span>
+        </div>
     </div>
+    <div class="tile" onclick="location.href='#news';" style="background-image: url('image/S__14352440.jpg');">
+        <div class="tile-content">
+            <span>最新消息</span>
+        </div>
+    </div>
+    
   </section>
   <footer>
-    <p>© 2024 花藝課堂. 版權所有。</p>
-    <p>電郵: info@floralclassroom.com | 電話: +123 456 7890</p>
+    <p>© 2024 奧莉花藝. 版權所有</p>
+    <p>信箱: hanaya.olivia@gmail.com | 電話: +0939-733-203</p>
     <ul class="social-links">
-      <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-      <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/hanaya.olivia/?locale=zh_TW" target="_blank">Facebook</a></li>
+      <!-- <li><a href="https://twitter.com" target="_blank">Twitter</a></li> -->
+      <li><a href="https://www.instagram.com/oliviaflower_tw/" target="_blank">Instagram</a></li>
     </ul>
   </footer>
   <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">

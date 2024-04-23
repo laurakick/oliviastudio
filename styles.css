@@ -50,7 +50,7 @@
     text-align: center;
   }
   
-  
+
   header h1 {
     margin: 0;
     color: #5e5e5e;
@@ -117,7 +117,7 @@
     /* Added for responsiveness */
   }
   
-  .tile {
+  .tile2 {
     width: 23%;
     height: 180px;
     background-size: cover;
@@ -128,6 +128,31 @@
     margin: 10px 0;
     /* Added margin for spacing between tiles */
   }
+
+  .tile {
+    width: 23%;   /* Width of each tile */
+    padding-top: 46%;  /* Height is approximately twice the width */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    overflow: hidden;  /* Ensures nothing spills out of the tile */
+}
+
+.tile-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
   
   .tile span {
     position: absolute;
@@ -138,7 +163,7 @@
     padding: 5px;
     font-family: 'JasonHandwriting1-Regular', sans-serif;
   
-    font-size: 17px;
+    font-size: 15px;
   }
   
   footer {
