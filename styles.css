@@ -28,13 +28,64 @@
     src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting2-Regular.woff2) format("woff2");
   }
   
-  
+
+  @font-face {
+    font-family: RawMarukoGothicCJKtc-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20TC/RawMarukoGothicCJKtc-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: RawMarukoGothicCJKjp-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20JP/RawMarukoGothicCJKjp-Regular.woff2) format("woff2");
+  }
+
+  /* @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css); */
+
+  @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+ @font-face {
+    font-family: 'MOEKai';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('font/edukai-5.0.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MOELi';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('font/MoeLI(隸書3.0版1080724上網).ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'wt021';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('font/wt021.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'iansui-Regular';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('font/iansui/Iansui-Regular.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
   body {
     /* font-family: 'Roboto', Arial, sans-serif; */
   
     /* font-family: 'Noto Serif CJK SC', serif; */
     font-family: 'Bakudai-Regular', sans-serif;
-    /* font-family: 'B2Hana-Regular', sans-serif; */
+  /* font-family: 'cwTeXFangSong', serif; */
+  /* font-family: 'B2Hana-Regular', sans-serif; */
   
     /* Ensured Roboto is primarily used */
     /* background: url('https://source.unsplash.com/1600x900/?floral') no-repeat center center fixed; */
