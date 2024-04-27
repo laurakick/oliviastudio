@@ -34,7 +34,7 @@ function createModal() {
     const fonts = [
         'Bakudai-Regular', 'B2Hana-Regular', 'Bakudai-Medium', 'masafont-Regular', 
         'JasonHandwriting1-Regular', 'JasonHandwriting2-Regular', 'MOEKai', 'MOELi','iansui-Regular',
-        'wtFangSong', 'wtLi'
+        'wtFangSong', 'wtLi', 'wtYanKai'
     ];
 
     // alert(currentTarget)

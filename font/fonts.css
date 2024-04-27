@@ -77,6 +77,15 @@
 
 
 @font-face {
+    font-family: 'wtYanKai';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('wt/wt064.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'iansui-Regular';
     /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
        src:  url('iansui/Iansui-Regular.ttf') format('truetype'); /* Fallback */
