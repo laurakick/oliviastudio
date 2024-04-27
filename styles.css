@@ -1,83 +1,5 @@
-@font-face {
-    font-family: Bakudai-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Regular.woff2) format("woff2");
-  }
-  
-  @font-face {
-    font-family: B2Hana-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/max-hana@1.1/webfont/B2Hana-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/max-hana@1.1/webfont/B2Hana-Regular.woff) format("woff");
-  }
-  
-  @font-face {
-    font-family: Bakudai-Medium;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Medium.woff2) format("woff2");
-  }
-  
-  @font-face {
-    font-family: masafont-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff) format("woff");
-  }
-  
-  @font-face {
-    font-family: "JasonHandwriting1-Regular";
-    src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting1-Regular.woff2) format("woff2");
-  }
-  
-  @font-face {
-    font-family: "JasonHandwriting2-Regular";
-    src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting2-Regular.woff2) format("woff2");
-  }
-  
 
-  @font-face {
-    font-family: RawMarukoGothicCJKtc-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20TC/RawMarukoGothicCJKtc-Regular.woff2) format("woff2");
-  }
-  @font-face {
-    font-family: RawMarukoGothicCJKjp-Regular;
-    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20JP/RawMarukoGothicCJKjp-Regular.woff2) format("woff2");
-  }
-
-  /* @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css); */
-
-  @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
-
- @font-face {
-    font-family: 'MOEKai';
-    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
-       src:  url('font/edukai-5.0.ttf') format('truetype'); /* Fallback */
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MOELi';
-    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
-       src:  url('font/MoeLI(隸書3.0版1080724上網).ttf') format('truetype'); /* Fallback */
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'wt021';
-    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
-       src:  url('font/wt021.ttf') format('truetype'); /* Fallback */
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'iansui-Regular';
-    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
-       src:  url('font/iansui/Iansui-Regular.ttf') format('truetype'); /* Fallback */
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
+@import url('font/fonts.css');
 
   body {
     /* font-family: 'Roboto', Arial, sans-serif; */
@@ -138,7 +60,10 @@
     color: white;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    /* padding: 10px; */
+    /* only top and bottom padding */
+    padding: 10px 0;
+    
     width: 100%;
     /* Ensures the caption stretches across the full width of the hero section */
     text-align: center;
@@ -168,18 +93,6 @@
     /* Added for responsiveness */
   }
   
-  .tile2 {
-    width: 23%;
-    height: 180px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-    /* Added margin for spacing between tiles */
-  }
-
   .tile {
     width: 23%;   /* Width of each tile */
     padding-top: 46%;  /* Height is approximately twice the width */

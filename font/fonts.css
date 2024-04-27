@@ -1,0 +1,86 @@
+@font-face {
+    font-family: Bakudai-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Regular.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: B2Hana-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/max-hana@1.1/webfont/B2Hana-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/max-hana@1.1/webfont/B2Hana-Regular.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: Bakudai-Medium;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/bakudaifont@1.48/webfont/Bakudai-Medium.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: masafont-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/masafont@2.1/webfont/MasaFont-Regular.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: "JasonHandwriting1-Regular";
+    src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting1-Regular.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: "JasonHandwriting2-Regular";
+    src: url(https://cdn.jsdelivr.net/gh/max32002/JasonHandWritingFonts@20240409/webfont/JasonHandwriting2-Regular.woff2) format("woff2");
+  }
+  
+
+  @font-face {
+    font-family: RawMarukoGothicCJKtc-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20TC/RawMarukoGothicCJKtc-Regular.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: RawMarukoGothicCJKjp-Regular;
+    src: url(https://cdn.jsdelivr.net/gh/max32002/maruko-gothic@1.001/webfont/raw/CJK%20JP/RawMarukoGothicCJKjp-Regular.woff2) format("woff2");
+  }
+
+  /* @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css); */
+
+  @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+ @font-face {
+    font-family: 'MOEKai';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('edukai-5.0.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MOELi';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('MoeLI(隸書3.0版1080724上網).ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'wtLi';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('wt/wt021.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wtFangSong';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('wt/wt024.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'iansui-Regular';
+    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
+       src:  url('iansui/Iansui-Regular.ttf') format('truetype'); /* Fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
