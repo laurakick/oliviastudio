@@ -58,23 +58,21 @@
     font-style: normal;
 }
 
-
+/* 
 @font-face {
     font-family: 'wtLi';
-    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
-       src:  url('wt/wt021.ttf') format('truetype'); /* Fallback */
+       src:  url('wt/wt021.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'wtFangSong';
-    /* src: url('path/to/your-font-file.woff') format('woff'), Primary */
-       src:  url('wt/wt024.ttf') format('truetype'); /* Fallback */
+       src:  url('wt/wt024.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
-
+ */
 
 @font-face {
     font-family: 'wtYanKai';
