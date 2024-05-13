@@ -27,7 +27,8 @@
   header h1 {
     margin: 0;
     color: #5e5e5e;
-    font-family: 'JasonHandwriting1-Regular', sans-serif;
+    /* font-family: 'JasonHandwriting1-Regular', sans-serif; */
+    font-family: 'Bakudai-Regular', sans-serif;
     /* Uses Bakudai-Regular font */
     /* font-weight: bold; */
     font-size: 48px;
@@ -125,7 +126,9 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
-    font-family: 'JasonHandwriting1-Regular', sans-serif;
+    /* font-family: 'JasonHandwriting1-Regular', sans-serif; */
+    font-family: 'Bakudai-Regular', sans-serif;
+
   
     font-size: 15px;
   }
@@ -138,7 +141,9 @@
     margin-top: 30px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   
-    font-family: 'JasonHandwriting1-Regular', sans-serif;
+    /* font-family: 'JasonHandwriting1-Regular', sans-serif; */
+    font-family: 'Bakudai-Regular', sans-serif;
+
   
   }
   
