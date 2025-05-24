@@ -1,0 +1,59 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 0; /* Remove default margin for h1 */
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0; /* Add some top margin */
+    text-align: center; /* Center the navigation items */
+}
+
+nav li {
+    display: inline-block; /* Display items horizontally */
+    margin: 0 10px; /* Add some margin between items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Default link color */
+    padding: 5px 10px; /* Add padding to links */
+}
+
+nav a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Main Content Area Styling */
+main {
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
