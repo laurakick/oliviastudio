@@ -106,6 +106,8 @@ article {
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
 }
 
 .gallery img:hover, .gallery-container img:hover {
@@ -120,6 +122,8 @@ article {
 .course-images img {
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
 }
 
 /* Service Items */
@@ -146,6 +150,14 @@ article {
 .service-item h4 {
     color: #007bff;
     margin-bottom: 10px;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    min-height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /* Lists */
@@ -209,21 +221,154 @@ footer a:hover {
 }
 
 /* Responsive Design */
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    main {
+        padding: 18px;
+        max-width: 900px;
+    }
+    
+    .service-items-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    nav a {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+}
+
+/* Mobile Styles (up to 768px) */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul {
+        margin: 15px 0 0 0;
+    }
+    
     nav li {
         display: block;
-        margin: 5px 0;
+        margin: 8px 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 12px 15px;
+        margin: 0 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        background-color: #f8f9fa;
+    }
+    
+    nav a:hover, nav a.active {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
     }
     
     main {
         padding: 15px;
     }
     
+    section h2 {
+        font-size: 1.5em;
+    }
+    
+    section h3 {
+        font-size: 1.3em;
+    }
+    
     .service-items-container {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .service-item {
+        padding: 15px;
     }
     
     .gallery, .gallery-container {
         justify-content: center;
+        gap: 8px;
+    }
+    
+    .gallery img, .gallery-container img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    .service-item img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        min-height: 60px;
+    }
+    
+    /* Contact page layout adjustments */
+    dl {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    dt {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    
+    dt:first-child {
+        margin-top: 0;
+    }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.6em;
+    }
+    
+    main {
+        padding: 12px;
+    }
+    
+    nav a {
+        margin: 0 5px;
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+    
+    section {
+        margin-bottom: 30px;
+        padding: 15px 0;
+    }
+    
+    section h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    section h3 {
+        font-size: 1.2em;
+    }
+    
+    .service-item {
+        padding: 12px;
+    }
+    
+    .service-item h4 {
+        font-size: 1.1em;
+    }
+    
+    footer {
+        padding: 15px;
+        font-size: 0.9em;
     }
 }
