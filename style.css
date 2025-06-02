@@ -17,6 +17,7 @@ header {
     background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
 }
 
 header h1 {
@@ -26,12 +27,55 @@ header h1 {
     color: #2c3e50;
 }
 
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Scrolled state - logo moves to left and aligns with nav */
+header.scrolled {
+    padding: 10px 20px;
+}
+
+header.scrolled .logo-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-bottom: 0;
+    justify-content: flex-start;
+}
+
+header.scrolled .header-logo {
+    height: 40px;
+}
+
+header.scrolled h1 {
+    display: none;
+}
+
 /* Navigation Styling */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 10px 0 0 0;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Adjust navigation when scrolled */
+header.scrolled nav ul {
+    margin-left: 200px; /* Space for logo */
+    text-align: left;
 }
 
 nav li {
@@ -245,6 +289,19 @@ footer a:hover {
         font-size: 1.8em;
     }
     
+    /* Logo responsive adjustments */
+    .header-logo {
+        height: 50px;
+    }
+    
+    header.scrolled .header-logo {
+        height: 35px;
+    }
+    
+    header.scrolled nav ul {
+        margin-left: 150px; /* Reduced space for smaller logo */
+    }
+    
     nav ul {
         margin: 15px 0 0 0;
     }
@@ -329,6 +386,20 @@ footer a:hover {
 @media (max-width: 480px) {
     header {
         padding: 15px;
+    }
+    
+    /* Logo adjustments for small screens */
+    .header-logo {
+        height: 40px;
+    }
+    
+    header.scrolled .header-logo {
+        height: 30px;
+    }
+    
+    header.scrolled nav ul {
+        margin-left: 120px; /* Further reduced space */
+        text-align: center; /* Center nav items on very small screens */
     }
     
     header h1 {
