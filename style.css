@@ -8,46 +8,187 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #fff;
 }
 
 /* Header Styling */
 header {
     background-color: #f0f0f0;
     padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
     text-align: center;
     font-size: 2em;
-    margin: 0; /* Remove default margin for h1 */
+    margin: 0;
+    color: #2c3e50;
 }
 
 /* Navigation Styling */
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0 0 0; /* Add some top margin */
-    text-align: center; /* Center the navigation items */
+    margin: 10px 0 0 0;
+    text-align: center;
 }
 
 nav li {
-    display: inline-block; /* Display items horizontally */
-    margin: 0 10px; /* Add some margin between items */
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333; /* Default link color */
-    padding: 5px 10px; /* Add padding to links */
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 nav a:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+nav a.active {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.15);
 }
 
 /* Main Content Area Styling */
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Article Styling */
+article {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+/* Gallery and Image Styling */
+.gallery, .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gallery img, .gallery-container img {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover, .gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Course Images */
+.course-images {
+    margin: 15px 0;
+}
+
+.course-images img {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Service Items */
+.service-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.service-item {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-item h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Date styling */
+.date {
+    color: #6c757d;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Contact Information */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+dd {
+    margin: 0;
 }
 
 /* Footer Styling */
@@ -56,4 +197,33 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .service-items-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery, .gallery-container {
+        justify-content: center;
+    }
 }
