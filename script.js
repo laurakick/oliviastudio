@@ -1,5 +1,63 @@
-// Logo scroll behavior
+// Header component loader and scroll behavior
 document.addEventListener('DOMContentLoaded', function() {
+    loadHeaderComponent();
+});
+
+function loadHeaderComponent() {
+    // Get the header placeholder
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    
+    if (!headerPlaceholder) {
+        console.warn('Header placeholder not found');
+        return;
+    }
+
+    // Load header component
+    fetch('header.html')
+        .then(response => response.text())
+        .then(headerHTML => {
+            headerPlaceholder.innerHTML = headerHTML;
+            
+            // Set active page
+            setActivePage();
+            
+            // Initialize scroll behavior
+            initScrollBehavior();
+        })
+        .catch(error => {
+            console.error('Error loading header:', error);
+        });
+}
+
+function setActivePage() {
+    // Get current page name from URL
+    const currentPage = getCurrentPageName();
+    
+    // Find and set active navigation link
+    const navLinks = document.querySelectorAll('nav a[data-page]');
+    navLinks.forEach(link => {
+        if (link.getAttribute('data-page') === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+function getCurrentPageName() {
+    const path = window.location.pathname;
+    const filename = path.split('/').pop();
+    
+    // Handle different cases
+    if (filename === '' || filename === 'index.html') {
+        return 'index';
+    }
+    
+    // Remove .html extension and return page name
+    return filename.replace('.html', '');
+}
+
+function initScrollBehavior() {
     const header = document.querySelector('header');
     const scrollThreshold = 100; // Pixels to scroll before logo moves
 
@@ -33,4 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Check initial state
     handleScroll();
-});
+}
