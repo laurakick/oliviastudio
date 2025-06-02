@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     const scrollThreshold = 100; // Pixels to scroll before logo moves
 
+    // Check if header exists
+    if (!header) {
+        console.warn('Header element not found');
+        return;
+    }
+
     function handleScroll() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
@@ -13,8 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Listen for scroll events
-    window.addEventListener('scroll', handleScroll);
+    // Listen for scroll events with throttling for better performance
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
     
     // Check initial state
     handleScroll();
