@@ -92,3 +92,74 @@ function initScrollBehavior() {
     // Check initial state
     handleScroll();
 }
+
+// Modern animations for new design
+document.addEventListener("DOMContentLoaded", () => {
+  /* Mobile Navigation Toggle */
+  const navToggle = document.querySelector(".nav-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("nav-open");
+      navToggle.classList.toggle("is-active");
+    });
+  }
+
+  /* Dropdown Menus for Language & Currency */
+  document.addEventListener("click", (e) => {
+    const langBtn = document.querySelector(".lang-btn");
+    const langMenu = document.querySelector(".lang-menu");
+    const currencyBtn = document.querySelector(".currency-btn");
+    const currencyMenu = document.querySelector(".currency-menu");
+
+    if (e.target.closest(".lang-btn")) {
+      if (langMenu) {
+        langMenu.classList.toggle("open");
+        if (currencyMenu) currencyMenu.classList.remove("open");
+      }
+    } else if (!e.target.closest(".language-selector")) {
+      if (langMenu) langMenu.classList.remove("open");
+    }
+
+    if (e.target.closest(".currency-btn")) {
+      if (currencyMenu) {
+        currencyMenu.classList.toggle("open");
+        if (langMenu) langMenu.classList.remove("open");
+      }
+    } else if (!e.target.closest(".currency-selector")) {
+      if (currencyMenu) currencyMenu.classList.remove("open");
+    }
+  });
+
+  /* Fade-In Sections (Intersection Observer) */
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px",
+  };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("appear");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  document.querySelectorAll(".fade-in-section").forEach((section) => {
+    appearOnScroll.observe(section);
+  });
+
+  /* Newsletter Form Submission */
+  const newsletterForm = document.querySelector(".newsletter-form");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailField = e.target.querySelector("input[name='email']").value;
+      if (!emailField || !emailField.includes("@")) {
+        alert("請輸入有效的電子郵件地址");
+        return;
+      }
+      alert("感謝您的訂閱！");
+      e.target.reset();
+    });
+  }
+});

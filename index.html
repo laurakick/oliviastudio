@@ -1,63 +1,381 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Flower Art</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <!-- Meta & SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olivia花藝工作室 – 線上乾燥花與永生花設計課程、美學提案、花藝佈置</title>
+  <meta
+    name="description"
+    content="Olivia花藝工作室 提供專業乾燥花與永生花設計課程、美學提案與客製化活動餐會佈置服務，讓您與花共生、似花綻放。"
+  />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Olivia花藝工作室" />
+  <meta
+    property="og:description"
+    content="線上乾燥花與永生花設計課程、美學提案與客製化活動餐會佈置服務。"
+  />
+  <meta property="og:image" content="image/olivia_heroimage.jpg" />
+  <meta property="og:url" content="https://olivia-studio.tw/" />
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Playfair+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="font/fonts.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header-placeholder"></div>
+  <!-- Header & Navigation -->
+  <header class="site-header fade-in-section">
+    <div class="logo-container">
+      <a href="/" class="logo">
+        <img src="image/olivia_logo.png" alt="Olivia花藝工作室 Logo" />
+        <span class="logo-text">Olivia花藝工作室</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li>
+          <a href="about.html">關於我們</a>
+          <ul class="submenu">
+            <li><a href="about.html#brand-story">品牌故事</a></li>
+            <li><a href="about.html#founder">創辦人介紹</a></li>
+          </ul>
+        </li>
+        <li><a href="courses.html">課程</a></li>
+        <li><a href="services.html">美學提案</a></li>
+        <li><a href="portfolio.html">活動餐會佈置</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <div class="header-controls">
+      <div class="language-selector">
+        <button class="lang-btn">繁體中文 ▾</button>
+        <ul class="lang-menu">
+          <li><a href="?lang=en">English</a></li>
+          <li><a href="?lang=zh-TW">繁體中文</a></li>
+        </ul>
+      </div>
+      <div class="currency-selector">
+        <button class="currency-btn">$ TWD ▾</button>
+        <ul class="currency-menu">
+          <li><a href="?currency=USD">$ USD</a></li>
+          <li><a href="?currency=TWD">$ TWD</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
 
-    <main>
-        <section id="welcome">
-            <h2>歡迎來到奧莉花藝</h2>
-            <p>讓花草融入生活，成為妳的解憂秘方。</p>
-            <p>奧莉花藝旨在培養專業花藝師，同時透過分享花藝之美，為愛好者提供療癒體驗。</p>
-        </section>
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section fade-in-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">讓花草融入生活</h1>
+      <p class="hero-subtitle">
+        成為妳的解憂秘方<br />
+        培養專業花藝師的溫暖園地
+      </p>
+      <blockquote class="hero-quote">
+        Live with flowers, bloom like a flower.<br />
+        「與花共生、似花綻放。」
+      </blockquote>
+      <a href="#tagline" class="hero-btn">了解更多</a>
+    </div>
+  </section>
 
-        <section id="quick-links">
-            <h2>服務導覽</h2>
-            <div class="service-items-container">
-                <div class="service-item">
-                    <h3><a href="about.html">關於我們</a></h3>
-                    <p>了解我們的理念與工作空間。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="news.html">最新消息</a></h3>
-                    <p>查看最新的課程資訊與活動公告。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="courses.html">花藝課程</a></h3>
-                    <p>探索我們豐富多樣的花藝學習課程。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="business.html">創業課程</a></h3>
-                    <p>為想要投身花藝產業的您提供專業培訓。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="services.html">服務項目</a></h3>
-                    <p>各種花藝服務，滿足您的不同需求。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="gallery.html">課程花絮</a></h3>
-                    <p>欣賞學員作品與課堂活動照片。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="portfolio.html">作品集</a></h3>
-                    <p>欣賞我們的精美花藝創作作品。</p>
-                </div>
-                <div class="service-item">
-                    <h3><a href="contact.html">聯絡我們</a></h3>
-                    <p>取得聯絡方式與預約資訊。</p>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- Introductory Tagline Section -->
+  <section id="tagline" class="tagline-section container fade-in-section">
+    <h2 class="section-heading">專業花藝教學，療癒美學體驗</h2>
+    <p class="section-text">
+      奧莉花藝旨在培養專業花藝師，同時透過分享花藝之美，為愛好者提供療癒體驗。<br />
+      在這裡，每一朵花都有它的故事，每一份創作都承載著情感與美好。<br />
+      讓我們一起探索花藝的無限可能，創造屬於自己的美麗世界。
+    </p>
+  </section>
 
-    <footer>
-        <p>&copy; 2023 Olivia Flower Art</p>
-    </footer>
+  <!-- Courses Section -->
+  <section id="courses" class="courses-section fade-in-section">
+    <div class="container">
+      <h2 class="section-heading">花藝課程</h2>
+      <div class="courses-grid">
+        <!-- Course 1 -->
+        <div class="course-card">
+          <img src="image/S__14352437.jpg" alt="花藝課程 1" class="course-image" />
+          <h3 class="course-title">基礎花藝課程</h3>
+          <p class="course-description">
+            學習基本的花材選擇與製作技巧，打造屬於自己的花藝作品。
+          </p>
+          <a href="courses.html" class="course-btn">查看詳情</a>
+        </div>
+        <!-- Course 2 -->
+        <div class="course-card">
+          <img src="image/S__14352438.jpg" alt="花藝課程 2" class="course-image" />
+          <h3 class="course-title">創業培訓課程</h3>
+          <p class="course-description">
+            為想要投身花藝產業的您提供專業培訓與創業指導。
+          </p>
+          <a href="business.html" class="course-btn">查看詳情</a>
+        </div>
+        <!-- Course 3 -->
+        <div class="course-card">
+          <img src="image/S__14352439.jpg" alt="花藝課程 3" class="course-image" />
+          <h3 class="course-title">進階花藝設計</h3>
+          <p class="course-description">
+            深入學習花藝設計理念與技巧，提升創作層次與美感表達。
+          </p>
+          <a href="courses.html" class="course-btn">查看詳情</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aesthetic Proposals Section -->
+  <section id="proposals" class="proposals-section fade-in-section">
+    <div class="container">
+      <h2 class="section-heading">美學提案</h2>
+      <!-- Proposal 1: 花藝設計服務 -->
+      <div class="proposal-item">
+        <div
+          class="proposal-image"
+          style="background-image: url('image/S__14352440.jpg');"
+        ></div>
+        <div class="proposal-content">
+          <h3 class="proposal-title">
+            花藝設計服務<br /><span class="en-subtitle">Floral Design Services</span>
+          </h3>
+          <p class="proposal-text">
+            提供專業的花藝設計服務，為您的特殊場合創造獨特的花卉裝飾。<br />
+            從概念發想到實際製作，我們用心為每一個委託案打造專屬的美學體驗。
+          </p>
+          <a href="services.html" class="proposal-btn">了解更多</a>
+        </div>
+      </div>
+      <!-- Proposal 2: 課程花絮 -->
+      <div class="proposal-item reverse">
+        <div
+          class="proposal-image"
+          style="background-image: url('image/Olivia_Teacher.png');"
+        ></div>
+        <div class="proposal-content">
+          <h3 class="proposal-title">
+            課程花絮<br /><span class="en-subtitle">Class Gallery</span>
+          </h3>
+          <p class="proposal-text">
+            記錄學員們在課堂中的精彩時刻與美麗作品。<br />
+            每一張照片都訴說著花藝學習的快樂與成長，見證每個人與花的美好相遇。
+          </p>
+          <a href="gallery.html" class="proposal-btn">進入</a>
+        </div>
+      </div>
+      <!-- Proposal 3: 作品集 -->
+      <div class="proposal-item">
+        <div
+          class="proposal-image"
+          style="background-image: url('image/Hero.png');"
+        ></div>
+        <div class="proposal-content">
+          <h3 class="proposal-title">
+            精選作品集<br /><span class="en-subtitle">Portfolio</span>
+          </h3>
+          <p class="proposal-text">
+            欣賞我們的精美花藝創作作品，每一件作品都承載著獨特的設計理念。<br />
+            從日常擺設到特殊場合裝飾，展現花藝的多樣魅力與無限可能。
+          </p>
+          <a href="portfolio.html" class="proposal-btn">探索更多</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Banquet Decorations Section -->
+  <section id="event-decor" class="event-decor-section fade-in-section">
+    <div class="container">
+      <h2 class="section-heading">活動餐會佈置</h2>
+      <p class="section-text">
+        將繁花與細節化為場景的情感，讓每一片花瓣都傳遞屬於您的專屬故事。<br />
+        從主桌設計、迎賓區佈置到餐桌花藝，打造只屬於您的宴會氛圍，為每個珍貴時刻增添亮點與氣氛。
+      </p>
+      <div class="decor-grid">
+        <div class="decor-image-wrapper">
+          <img
+            src="image/S__14352437.jpg"
+            alt="宴會佈置 1"
+            class="decor-image"
+          />
+        </div>
+        <div class="decor-image-wrapper">
+          <img
+            src="image/S__14352438.jpg"
+            alt="宴會佈置 2"
+            class="decor-image"
+          />
+        </div>
+        <div class="decor-image-wrapper">
+          <img
+            src="image/S__14352439.jpg"
+            alt="宴會佈置 3"
+            class="decor-image"
+          />
+        </div>
+        <div class="decor-text-block">
+          <h3 class="decor-subheading">
+            客製化服務<br /><span class="en-subsubtitle">Customized Decoration</span>
+          </h3>
+          <p class="decor-text">
+            根據您的需求與喜好，量身打造專屬的花藝佈置方案。<br />
+            無論是婚禮、生日派對或企業活動，我們都能為您創造難忘的視覺饗宴。
+          </p>
+          <a href="contact.html" class="decor-btn">聯絡我們</a>
+        </div>
+      </div>
+      <p class="section-text-secondary">
+        多元的主題佈置服務：<br />
+        無論是華麗的宴會、溫馨的家庭聚會，還是浪漫的婚禮現場，我們都期待能以花藝和創意巧思為每一個佈置注入靈魂與色彩。
+      </p>
+      <a href="contact.html" class="decor-btn-large">立即預約諮詢</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer fade-in-section">
+    <div class="footer-container">
+      <!-- Column 1: 關於我們 -->
+      <div class="footer-column">
+        <h4 class="footer-heading">關於我們</h4>
+        <ul class="footer-list">
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="about.html#founder">創辦人介紹</a></li>
+        </ul>
+      </div>
+      <!-- Column 2: 課程服務 -->
+      <div class="footer-column">
+        <h4 class="footer-heading">課程服務</h4>
+        <ul class="footer-list">
+          <li><a href="courses.html">花藝課程</a></li>
+          <li><a href="business.html">創業課程</a></li>
+          <li><a href="services.html">服務項目</a></li>
+          <li><a href="gallery.html">課程花絮</a></li>
+        </ul>
+      </div>
+      <!-- Column 3: 聯絡資訊 -->
+      <div class="footer-column">
+        <h4 class="footer-heading">聯絡資訊</h4>
+        <address class="footer-address">
+          台北市大安區（詳細地址請洽詢）<br />
+          （全預約制）<br />
+          Tel: <a href="tel:+886227408022">02-2740-8022</a><br />
+          Email: <a href="mailto:service@olivia-studio.tw">service@olivia-studio.tw</a>
+        </address>
+      </div>
+      <!-- Column 4: 訂閱消息 -->
+      <div class="footer-column">
+        <h4 class="footer-heading">訂閱消息</h4>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            name="email"
+            placeholder="輸入您的電子郵件"
+            required
+          />
+          <button type="submit" class="footer-btn">訂閱</button>
+        </form>
+        <div class="social-icons">
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDIuMTYzQzE1LjIwNCAyLjE2MyAxNS41ODQgMi4xNzUgMTYuODUgMi4yMzNDMTguMTAyIDIuMjkgMTguNzk1IDIuNDczIDE5LjMyNCAyLjgyQzE5Ljc3MyAzLjEzNSAxOS45NTggMy40MjMgMjAuMjc3IDMuNzQyQzIwLjU5NiA0LjA2MSAyMC44OTggNC4yMzggMjEuMTkgNC42OTFDMjEuNTI3IDUuMjIgMjEuNzEgNS45MTMgMjEuNzY3IDcuMTY1QzIxLjgyNSA4LjQzMSAyMS44MzggOC44MTEgMjEuODM4IDEyQzIxLjgzOCAxNS4xODkgMjEuODI1IDE1LjU2OSAyMS43NjcgMTYuODM1QzIxLjcxIDE4LjA4NyAyMS41MjcgMTguNzggMjEuMTkgMTkuMzA5QzIwLjg5OCAxOS43NjIgMjAuNTk2IDE5LjkzOSAyMC4yNzcgMjAuMjU4QzE5Ljk1OCAyMC41NzcgMTkuNzczIDIwLjg2NSAxOS4zMjQgMjEuMTgxQzE4Ljc5NSAyMS41MTggMTguMTAyIDIxLjcwMSAxNi44NSAyMS43NThDMTUuNTg0IDIxLjgxNiAxNS4yMDQgMjEuODI4IDEyIDIxLjgyOEM4Ljc5NiAyMS44MjggOC40MTYgMjEuODE2IDcuMTUgMjEuNzU4QzUuODk4IDIxLjcwMSA1LjIwNSAyMS41MTggNC42NzYgMjEuMTgxQzQuMjI3IDIwLjg2NSA0LjA0MiAyMC41NzcgMy43MjMgMjAuMjU4QzMuNDA0IDE5LjkzOSAzLjEwMiAxOS43NjIgMi44MSAxOS4zMDlDMi40NzMgMTguNzggMi4yOSAxOC4wODcgMi4yMzMgMTYuODM1QzIuMTc1IDE1LjU2OSAyLjE2MyAxNS4xODkgMi4xNjMgMTJDMi4xNjMgOC44MTEgMi4xNzUgOC40MzEgMi4yMzMgNy4xNjVDMi4yOSA1LjkxMyAyLjQ3MyA1LjIyIDIuODEgNC42OTFDMC4xMDIgNC4yMzggMy40MDQgNC4wNjEgMy43MjMgMy43NDJDNC4wNDIgMy40MjMgNC4yMjcgMy4xMzUgNC42NzYgMi44MkM1LjIwNSAyLjQ3MyA1Ljg5OCAyLjI5IDcuMTUgMi4yMzNDOC40MTYgMi4xNzUgOC43OTYgMi4xNjMgMTIgMi4xNjNaTTEyIDBDOC43NDEgMCA4LjMzMyAwLjAxNCA3LjA1MyAwLjA3MkM1Ljc3NSAwLjEzIDQuOTA1IDAuMzMzIDQuMTQgMC42M0MzLjM1MSAwLjkzNyAyLjY4MSAxLjM0NyAyLjAxNCAxLjc3MUMxLjM0NyAyLjE5NSAwLjkzNyAyLjY1MSAwLjYzIDMuNDRDMC4zMzMgNC4yMDUgMC4xMyA1LjA3NSAwLjA3MiA2LjM1M0MwLjAxNCA3LjYzMyAwIDguMDQxIDAgMTJDMCAxNS45NTkgMC4wMTQgMTYuMzY3IDAuMDcyIDE3LjY0N0MwLjEzIDE4LjkyNSAwLjMzMyAxOS43OTUgMC42MyAyMC41NkMwLjkzNyAyMS4zNDkgMS4zNDcgMjIuMDE5IDEuNzcxIDIyLjY4NkMyLjE5NSAyMy4zNTMgMi42NTEgMjMuNzYzIDMuNDQgMjQuMDdDNC4yMDUgMjQuMzY3IDUuMDc1IDI0LjU3IDYuMzUzIDI0LjYyOEM3LjYzMyAyNC42ODYgOC4wNDEgMjQuNyAxMiAyNC43QzE1Ljk1OSAyNC43IDE2LjM2NyAyNC42ODYgMTcuNjQ3IDI0LjYyOEMxOC45MjUgMjQuNTcgMTkuNzk1IDI0LjM2NyAyMC41NiAyNC4wN0MyMS4zNDkgMjMuNzYzIDIyLjAxOSAyMy4zNTMgMjIuNjg2IDIyLjkyOUMyMy4zNTMgMjIuNTA1IDIzLjc2MyAyMi4wNDkgMjQuMDcgMjEuMjZDMjQuMzY3IDIwLjQ5NSAyNC41NyAxOS42MjUgMjQuNjI4IDE4LjM0N0MyNC42ODYgMTcuMDY3IDI0LjcgMTYuNjU5IDI0LjcgMTJDMjQuNyA4LjA0MSAyNC42ODYgNy42MzMgMjQuNjI4IDYuMzUzQzI0LjU3IDUuMDc1IDI0LjM2NyA0LjIwNSAyNC4wNyAzLjQ0QzIzLjc2MyAyLjY1MSAyMy4zNTMgMS45ODEgMjIuOTI5IDEuMzE0QzIyLjUwNSAwLjY0NyAyMi4wNDkgMC4yMzcgMjEuMjYgLTAuMDdDMjAuNDk1IC0wLjM2NyAxOS42MjUgLTAuNTcgMTguMzQ3IC0wLjYyOEMxNy4wNjcgLTAuNjg2IDE2LjY1OSAtMC43IDEyIC0wLjdaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPHBhdGggZD0iTTEyIDUuODM4QzguNTk3IDUuODM4IDUuODM4IDguNTk3IDUuODM4IDEyQzUuODM4IDE1LjQwMyA4LjU5NyAxOC4xNjIgMTIgMTguMTYyQzE1LjQwMyAxOC4xNjIgMTguMTYyIDE1LjQwMyAxOC4xNjIgMTJDMTguMTYyIDguNTk3IDE1LjQwMyA1LjgzOCAxMiA1LjgzOFpNMTIgMTUuOTk1QzguNzUgMTUuOTk1IDguMDA1IDEzLjI1IDEuMDA1IDEyQzEuMDA1IDguNzUgMy43NSA4LjAwNSAxMiA4LjAwNUMxNS4yNSA4LjAwNSAxNS45OTUgMTAuNzUgMTUuOTk1IDEyQzE1Ljk5NSAxNS4yNSAxMy4yNSAxNS45OTUgMTIgMTUuOTk1WiIgZmlsbD0iY3VycmVudENvbG9yIi8+CjxjaXJjbGUgY3g9IjE4LjQwNiIgY3k9IjUuNTk0IiByPSIxLjQ0IiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPC9zdmc+" alt="Instagram" />
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0IDEyQzI0IDUuMzczIDE4LjYyNyAwIDEyIDBTMCA1LjM3MyAwIDEyQzAgMTcuOTkgNC4zODggMjIuODU0IDEwLjEyNSAyMy43NzJWMTUuNDY5SDcuMDc4VjEySDEwLjEyNVY5LjM1NkMxMC4xMjUgNi4zNDkgMTEuOTE3IDQuNjg4IDE0LjY1OCA0LjY4OEMxNS45NyA0LjY4OCAxNy4zNDQgNC45MjIgMTcuMzQ0IDQuOTIyVjcuODc1SDE1LjgzQzE0LjMxIDcuODc1IDEzLjg3NSA4Ljc4IDEzLjg3NSA5LjcxOVYxMkgxNy4yMDNMMTYuNjcxIDE1LjQ2OUgxMy44NzVWMjMuNzcyQzE5LjYxMiAyMi44NTQgMjQgMTcuOTkgMjQgMTJaIiBmaWxsPSJjdXJyZW50Q29sb3IiLz4KPC9zdmc+" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Olivia花藝工作室. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      /* Mobile Navigation Toggle */
+      const navToggle = document.querySelector(".nav-toggle");
+      const mainNav = document.querySelector(".main-nav");
+      if (navToggle && mainNav) {
+        navToggle.addEventListener("click", () => {
+          mainNav.classList.toggle("nav-open");
+          navToggle.classList.toggle("is-active");
+        });
+      }
+
+      /* Dropdown Menus for Language & Currency */
+      document.addEventListener("click", (e) => {
+        const langBtn = document.querySelector(".lang-btn");
+        const langMenu = document.querySelector(".lang-menu");
+        const currencyBtn = document.querySelector(".currency-btn");
+        const currencyMenu = document.querySelector(".currency-menu");
+
+        if (e.target.closest(".lang-btn")) {
+          langMenu.classList.toggle("open");
+          if (currencyMenu) currencyMenu.classList.remove("open");
+        } else if (!e.target.closest(".language-selector")) {
+          if (langMenu) langMenu.classList.remove("open");
+        }
+
+        if (e.target.closest(".currency-btn")) {
+          currencyMenu.classList.toggle("open");
+          if (langMenu) langMenu.classList.remove("open");
+        } else if (!e.target.closest(".currency-selector")) {
+          if (currencyMenu) currencyMenu.classList.remove("open");
+        }
+      });
+
+      /* Fade-In Sections (Intersection Observer) */
+      const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px",
+      };
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("appear");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      document.querySelectorAll(".fade-in-section").forEach((section) => {
+        appearOnScroll.observe(section);
+      });
+
+      /* Newsletter Form Submission */
+      const newsletterForm = document.querySelector(".newsletter-form");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const emailField = e.target.querySelector("input[name='email']").value;
+          if (!emailField || !emailField.includes("@")) {
+            alert("請輸入有效的電子郵件地址");
+            return;
+          }
+          alert("感謝您的訂閱！");
+          e.target.reset();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
