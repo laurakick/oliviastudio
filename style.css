@@ -95,7 +95,7 @@ button {
   text-decoration: none;
 }
 .logo img {
-  height: 40px;
+  height: 50px;
   margin-right: 8px;
 }
 .logo-text {
@@ -169,6 +169,31 @@ button {
   display: flex;
   align-items: center;
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  position: relative;
+  overflow: visible;
+}
+
+/* Delicate botanical underline for header buttons */
+.lang-btn::after,
+.currency-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 4'%3E%3Cpath d='M2,2 Q4,1 6,2 Q8,1 10,2 Q12,1 14,2 Q16,1 18,2 Q20,1 22,2 Q24,1 26,2 Q28,1 30,2 Q32,1 34,2 Q36,1 38,2' stroke='%236F4E37' stroke-width='0.5' fill='none' opacity='0.6'/%3E%3Cpath d='M4,2 Q5,1.5 6,2 Q7,1.5 8,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3Cpath d='M12,2 Q13,1.5 14,2 Q15,1.5 16,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3Cpath d='M20,2 Q21,1.5 22,2 Q23,1.5 24,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3Cpath d='M28,2 Q29,1.5 30,2 Q31,1.5 32,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover::after,
+.currency-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1.1);
 }
 .lang-btn:hover,
 .currency-btn:hover {
@@ -348,9 +373,124 @@ button {
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.hero-btn:hover {
-  background-color: #AD7960;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+/* Apply botanical decoration to hero buttons */
+.hero-btn {
+  position: relative;
+  overflow: visible;
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M2,2 Q4,1 6,2 Q5,4 4,3 Q3,5 2,4 Q1,3 2,2 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M14,2 Q16,1 18,2 Q17,4 16,3 Q15,5 14,4 Q13,3 14,2 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M2,14 Q4,13 6,14 Q5,16 4,15 Q3,17 2,16 Q1,15 2,14 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M14,14 Q16,13 18,14 Q17,16 16,15 Q15,17 14,16 Q13,15 14,14 Z' fill='%236F4E37' opacity='0.4'/%3E%3C/svg%3E"),
+    linear-gradient(45deg, transparent 46%, #6F4E37 47%, #6F4E37 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 46%, #6F4E37 47%, #6F4E37 49%, transparent 50%);
+  background-size: 20px 20px, 8px 8px, 8px 8px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 6px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 22px 22px, 10px 10px, 10px 10px;
+}
+
+/* ==========================================
+   Botanical Button Border Decorations
+   ========================================== */
+
+/* Base botanical border mixin for all buttons */
+.botanical-border {
+  position: relative;
+  overflow: visible;
+}
+
+.botanical-border::before,
+.botanical-border::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Floral corner decorations */
+.botanical-border::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    radial-gradient(circle at 0% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 0% 100%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 100%, #6F4E37 0%, transparent 10%);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Vine-like border pattern */
+.botanical-border::after {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(-45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(90deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%),
+    linear-gradient(0deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%);
+  background-size: 12px 12px, 12px 12px, 8px 8px, 8px 8px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Hover effect for botanical borders */
+.botanical-border:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+.botanical-border:hover::after {
+  opacity: 0.6;
+  background-size: 14px 14px, 14px 14px, 10px 10px, 10px 10px;
+}
+
+/* SVG-based floral decorations */
+.btn-floral-decoration {
+  position: relative;
+  overflow: visible;
+}
+
+.btn-floral-decoration::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10,10 Q20,5 30,10 Q25,20 20,15 Q15,25 10,20 Q5,15 10,10 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M70,10 Q80,5 90,10 Q85,20 80,15 Q75,25 70,20 Q65,15 70,10 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M10,70 Q20,65 30,70 Q25,80 20,75 Q15,85 10,80 Q5,75 10,70 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M70,70 Q80,65 90,70 Q85,80 80,75 Q75,85 70,80 Q65,75 70,70 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M50,20 Q55,15 60,20 Q55,25 50,20 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M20,50 Q25,45 30,50 Q25,55 20,50 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M70,50 Q75,45 80,50 Q75,55 70,50 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M50,80 Q55,75 60,80 Q55,85 50,80 Z' fill='%236F4E37' opacity='0.2'/%3E%3C/svg%3E");
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-floral-decoration:hover::before {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 @media (max-width: 1023px) {
@@ -455,10 +595,121 @@ button {
   font-weight: 600;
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: visible;
 }
-.course-btn:hover {
-  background-color: #AD7960;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+/* Delicate leaf border for course buttons */
+.course-btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M1,1 Q2,0.5 3,1 Q2.5,2 2,1.5 Q1.5,2.5 1,2 Q0.5,1.5 1,1 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M13,1 Q14,0.5 15,1 Q14.5,2 14,1.5 Q13.5,2.5 13,2 Q12.5,1.5 13,1 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M1,13 Q2,12.5 3,13 Q2.5,14 2,13.5 Q1.5,14.5 1,14 Q0.5,13.5 1,13 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M13,13 Q14,12.5 15,13 Q14.5,14 14,13.5 Q13.5,14.5 13,14 Q12.5,13.5 13,13 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M8,2 Q8.5,1.5 9,2 Q8.5,2.5 8,2 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M2,8 Q2.5,7.5 3,8 Q2.5,8.5 2,8 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M13,8 Q13.5,7.5 14,8 Q13.5,8.5 13,8 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M8,14 Q8.5,13.5 9,14 Q8.5,14.5 8,14 Z' fill='%236F4E37' opacity='0.3'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, transparent 47%, #6F4E37 48%, #6F4E37 50%, transparent 51%),
+    linear-gradient(0deg, transparent 47%, #6F4E37 48%, #6F4E37 50%, transparent 51%);
+  background-size: 16px 16px, 6px 6px, 6px 6px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.25;
+  transition: all 0.3s ease;
+}
+
+.course-btn:hover::before {
+  opacity: 0.4;
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   Botanical Button Border Decorations
+   ========================================== */
+
+/* Base botanical border mixin for all buttons */
+.botanical-border {
+  position: relative;
+  overflow: visible;
+}
+
+.botanical-border::before,
+.botanical-border::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Floral corner decorations */
+.botanical-border::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    radial-gradient(circle at 0% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 0% 100%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 100%, #6F4E37 0%, transparent 10%);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Vine-like border pattern */
+.botanical-border::after {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(-45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(90deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%),
+    linear-gradient(0deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%);
+  background-size: 12px 12px, 12px 12px, 8px 8px, 8px 8px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Hover effect for botanical borders */
+.botanical-border:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+.botanical-border:hover::after {
+  opacity: 0.6;
+  background-size: 14px 14px, 14px 14px, 10px 10px, 10px 10px;
+}
+
+/* SVG-based floral decorations */
+.btn-floral-decoration {
+  position: relative;
+  overflow: visible;
+}
+
+.btn-floral-decoration::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10,10 Q20,5 30,10 Q25,20 20,15 Q15,25 10,20 Q5,15 10,10 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M70,10 Q80,5 90,10 Q85,20 80,15 Q75,25 70,20 Q65,15 70,10 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M10,70 Q20,65 30,70 Q25,80 20,75 Q15,85 10,80 Q5,75 10,70 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M70,70 Q80,65 90,70 Q85,80 80,75 Q75,85 70,80 Q65,75 70,70 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M50,20 Q55,15 60,20 Q55,25 50,20 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M20,50 Q25,45 30,50 Q25,55 20,50 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M70,50 Q75,45 80,50 Q75,55 70,50 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M50,80 Q55,75 60,80 Q55,85 50,80 Z' fill='%236F4E37' opacity='0.2'/%3E%3C/svg%3E");
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-floral-decoration:hover::before {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 @media (max-width: 1023px) {
@@ -543,11 +794,121 @@ button {
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   width: fit-content;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  align-self: flex-start;
+  position: relative;
+  overflow: visible;
 }
-.proposal-btn:hover {
-  background-color: #AD7960;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+/* Flowing vine decoration for proposal buttons */
+.proposal-btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M1,1 Q3,0 5,1 Q4,3 3,2 Q2,4 1,3 Q0,2 1,1 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M13,1 Q15,0 17,1 Q16,3 15,2 Q14,4 13,3 Q12,2 13,1 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M1,13 Q3,12 5,13 Q4,15 3,14 Q2,16 1,15 Q0,14 1,13 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M13,13 Q15,12 17,13 Q16,15 15,14 Q14,16 13,15 Q12,14 13,13 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M9,3 Q10,2 11,3 Q10,4 9,3 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M3,9 Q4,8 5,9 Q4,10 3,9 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M13,9 Q14,8 15,9 Q14,10 13,9 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M9,15 Q10,14 11,15 Q10,16 9,15 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M6,6 Q7,5.5 8,6 Q7.5,7 7,6.5 Q6.5,7.5 6,7 Q5.5,6.5 6,6 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M10,10 Q11,9.5 12,10 Q11.5,11 11,10.5 Q10.5,11.5 10,11 Q9.5,10.5 10,10 Z' fill='%236F4E37' opacity='0.2'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(45deg, transparent 0px, transparent 2px, #6F4E37 2px, #6F4E37 3px, transparent 3px, transparent 10px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 2px, #6F4E37 2px, #6F4E37 3px, transparent 3px, transparent 10px);
+  background-size: 18px 18px, 7px 7px, 7px 7px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.course-btn:hover::before {
+  opacity: 0.4;
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   Botanical Button Border Decorations
+   ========================================== */
+
+/* Base botanical border mixin for all buttons */
+.botanical-border {
+  position: relative;
+  overflow: visible;
+}
+
+.botanical-border::before,
+.botanical-border::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Floral corner decorations */
+.botanical-border::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    radial-gradient(circle at 0% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 0% 100%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 100%, #6F4E37 0%, transparent 10%);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Vine-like border pattern */
+.botanical-border::after {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(-45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(90deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%),
+    linear-gradient(0deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%);
+  background-size: 12px 12px, 12px 12px, 8px 8px, 8px 8px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Hover effect for botanical borders */
+.botanical-border:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+.botanical-border:hover::after {
+  opacity: 0.6;
+  background-size: 14px 14px, 14px 14px, 10px 10px, 10px 10px;
+}
+
+/* SVG-based floral decorations */
+.btn-floral-decoration {
+  position: relative;
+  overflow: visible;
+}
+
+.btn-floral-decoration::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10,10 Q20,5 30,10 Q25,20 20,15 Q15,25 10,20 Q5,15 10,10 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M70,10 Q80,5 90,10 Q85,20 80,15 Q75,25 70,20 Q65,15 70,10 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M10,70 Q20,65 30,70 Q25,80 20,75 Q15,85 10,80 Q5,75 10,70 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M70,70 Q80,65 90,70 Q85,80 80,75 Q75,85 70,80 Q65,75 70,70 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M50,20 Q55,15 60,20 Q55,25 50,20 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M20,50 Q25,45 30,50 Q25,55 20,50 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M70,50 Q75,45 80,50 Q75,55 70,50 Z' fill='%236F4E37' opacity='0.2'/%3E%3Cpath d='M50,80 Q55,75 60,80 Q55,85 50,80 Z' fill='%236F4E37' opacity='0.2'/%3E%3C/svg%3E");
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-floral-decoration:hover::before {
+  transform: scale(1.05);
+  opacity: 0.8;
 }
 
 @media (max-width: 1023px) {
@@ -663,7 +1024,35 @@ button {
   width: fit-content;
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  align-self: flex-start;
+  position: relative;
+  overflow: visible;
+}
+
+/* Elegant botanical frame for decor buttons */
+.decor-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2,2 Q4,0 6,2 Q5,4 4,3 Q3,5 2,4 Q0,3 2,2 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M18,2 Q20,0 22,2 Q21,4 20,3 Q19,5 18,4 Q16,3 18,2 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M2,18 Q4,16 6,18 Q5,20 4,19 Q3,21 2,20 Q0,19 2,18 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M18,18 Q20,16 22,18 Q21,20 20,19 Q19,21 18,20 Q16,19 18,18 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M12,4 Q13,3 14,4 Q13,5 12,4 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M4,12 Q5,11 6,12 Q5,13 4,12 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M18,12 Q19,11 20,12 Q19,13 18,12 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M12,20 Q13,19 14,20 Q13,21 12,20 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M8,8 Q9,7 10,8 Q9,9 8,8 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M14,8 Q15,7 16,8 Q15,9 14,8 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M8,16 Q9,15 10,16 Q9,17 8,16 Z' fill='%236F4E37' opacity='0.3'/%3E%3Cpath d='M14,16 Q15,15 16,16 Q15,17 14,16 Z' fill='%236F4E37' opacity='0.3'/%3E%3C/svg%3E"),
+    linear-gradient(0deg, transparent 40%, #6F4E37 41%, #6F4E37 43%, transparent 44%),
+    linear-gradient(90deg, transparent 40%, #6F4E37 41%, #6F4E37 43%, transparent 44%);
+  background-size: 24px 24px, 100% 2px, 2px 100%;
+  background-position: 0 0, 0 0, 0 0;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 6px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.decor-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 26px 26px, 100% 3px, 3px 100%;
 }
 .decor-btn:hover {
   background-color: #AD7960;
@@ -691,6 +1080,38 @@ button {
   margin: 0 auto;
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Ornate floral border for large decor buttons */
+.decor-btn-large::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M3,3 Q6,0 9,3 Q7,6 5,4 Q3,7 3,5 Q0,4 3,3 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M21,3 Q24,0 27,3 Q25,6 23,4 Q21,7 21,5 Q18,4 21,3 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M3,21 Q6,18 9,21 Q7,24 5,22 Q3,25 3,23 Q0,22 3,21 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M21,21 Q24,18 27,21 Q25,24 23,22 Q21,25 21,23 Q18,22 21,21 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M15,5 Q16,4 17,5 Q16,6 15,5 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M5,15 Q6,14 7,15 Q6,16 5,15 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M23,15 Q24,14 25,15 Q24,16 23,15 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M15,25 Q16,24 17,25 Q16,26 15,25 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M10,10 Q11,9 12,10 Q11,11 10,10 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M18,10 Q19,9 20,10 Q19,11 18,10 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M10,20 Q11,19 12,20 Q11,21 10,20 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M18,20 Q19,19 20,20 Q19,21 18,20 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M15,15 Q16,14 17,15 Q16,16 15,15 Z' fill='%236F4E37' opacity='0.3'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 20% 20%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 80% 20%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 20% 80%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 80% 80%, #6F4E37 1px, transparent 2px),
+    linear-gradient(45deg, transparent 48%, #6F4E37 49%, #6F4E37 50%, transparent 51%),
+    linear-gradient(-45deg, transparent 48%, #6F4E37 49%, #6F4E37 50%, transparent 51%);
+  background-size: 30px 30px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 12px 12px, 12px 12px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0.35;
+  transition: all 0.3s ease;
+}
+
+.decor-btn-large:hover::before {
+  opacity: 0.6;
+  transform: scale(1.03) rotate(1deg);
+  background-size: 32px 32px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 14px 14px, 14px 14px;
 }
 .decor-btn-large:hover {
   background-color: #AD7960;
@@ -797,6 +1218,33 @@ button {
   font-weight: 600;
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
   transition: background-color 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Subtle botanical accent for footer button */
+.footer-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M1,1 Q2,0.5 3,1 Q2.5,2 2,1.5 Q1.5,2.5 1,2 Q0.5,1.5 1,1 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M9,1 Q10,0.5 11,1 Q10.5,2 10,1.5 Q9.5,2.5 9,2 Q8.5,1.5 9,1 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M1,9 Q2,8.5 3,9 Q2.5,10 2,9.5 Q1.5,10.5 1,10 Q0.5,9.5 1,9 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M9,9 Q10,8.5 11,9 Q10.5,10 10,9.5 Q9.5,10.5 9,10 Q8.5,9.5 9,9 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M6,2 Q6.5,1.5 7,2 Q6.5,2.5 6,2 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M2,6 Q2.5,5.5 3,6 Q2.5,6.5 2,6 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M9,6 Q9.5,5.5 10,6 Q9.5,6.5 9,6 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M6,10 Q6.5,9.5 7,10 Q6.5,10.5 6,10 Z' fill='%236F4E37' opacity='0.4'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%),
+    linear-gradient(0deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%);
+  background-size: 12px 12px, 4px 4px, 4px 4px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 0 6px 6px 0;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover::before {
+  opacity: 0.35;
+  transform: scale(1.02);
 }
 .footer-btn:hover {
   background-color: #AD7960;
@@ -1370,4 +1818,302 @@ footer:not(.site-footer) {
     section:not(.fade-in-section) {
         padding: 15px;
     }
+}
+
+header.scrolled .header-logo {
+    height: 40px;
+}
+
+header.scrolled h1 {
+    display: none;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Adjust navigation when scrolled */
+header.scrolled nav ul {
+    margin-left: 200px; /* Space for logo */
+    text-align: left;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #6F4E37;
+    background-color: rgba(111, 78, 55, 0.1);
+}
+
+nav a.active {
+    color: #6F4E37;
+    background-color: rgba(111, 78, 55, 0.15);
+}
+
+/* Main Content Area Styling */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #6F4E37;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Article Styling */
+article {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border-left: 4px solid #6F4E37;
+}
+
+/* Gallery and Image Styling */
+.gallery, .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gallery img, .gallery-container img {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery img:hover, .gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Course Images */
+.course-images {
+    margin: 15px 0;
+}
+
+.course-images img {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Service Items */
+.service-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.service-item {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-item h4 {
+    color: #6F4E37;
+    margin-bottom: 10px;
+}
+
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    min-height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Links */
+a {
+    color: #6F4E37;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Date styling */
+.date {
+    color: #6c757d;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Contact Information */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    margin: 20px 0;
+}
+
+dt {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+dd {
+    margin: 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #6F4E37;
+}
+
+/* ==========================================
+   Enhanced Botanical Button Animations
+   ========================================== */
+
+/* Breathing animation for botanical decorations */
+@keyframes botanical-breathe {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.5; 
+    transform: scale(1.01); 
+  }
+}
+
+@keyframes floral-shimmer {
+  0%, 100% { 
+    background-position: 0% 0%; 
+  }
+  50% { 
+    background-position: 100% 100%; 
+  }
+}
+
+@keyframes vine-grow {
+  0% { 
+    transform: scale(0.95) rotate(-1deg); 
+  }
+  50% { 
+    transform: scale(1.02) rotate(1deg); 
+  }
+  100% { 
+    transform: scale(0.95) rotate(-1deg); 
+  }
+}
+
+/* Apply subtle animation to all botanical button decorations */
+.hero-btn::before,
+.course-btn::before,
+.proposal-btn::before,
+.decor-btn::before,
+.decor-btn-large::before,
+.footer-btn::before {
+  animation: botanical-breathe 6s ease-in-out infinite;
+}
+
+/* Special hover effects for enhanced interactivity */
+.hero-btn:hover::before {
+  animation: floral-shimmer 2s ease-in-out infinite, botanical-breathe 3s ease-in-out infinite;
+}
+
+.proposal-btn:hover::before {
+  animation: vine-grow 2.5s ease-in-out infinite;
+}
+
+.decor-btn-large:hover::before {
+  animation: botanical-breathe 1.5s ease-in-out infinite, floral-shimmer 4s ease-in-out infinite;
+}
+
+/* Seasonal color variations (can be activated via CSS classes) */
+.botanical-spring .hero-btn::before,
+.botanical-spring .course-btn::before,
+.botanical-spring .proposal-btn::before {
+  filter: hue-rotate(30deg) brightness(1.1);
+}
+
+.botanical-autumn .decor-btn::before,
+.botanical-autumn .decor-btn-large::before {
+  filter: hue-rotate(-15deg) saturate(1.2);
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-btn::before,
+  .course-btn::before,
+  .proposal-btn::before,
+  .decor-btn::before,
+  .decor-btn-large::before,
+  .footer-btn::before {
+    animation: none;
+  }
+  
+  .lang-btn::after,
+  .currency-btn::after {
+    transition: opacity 0.3s ease;
+  }
 }

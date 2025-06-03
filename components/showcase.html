@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botanical Button Showcase - Olivia花藝工作室</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            padding: 40px;
+            background: linear-gradient(135deg, #F9F7F3 0%, #F4F1E8 100%);
+            font-family: "Noto Sans TC", sans-serif;
+        }
+        .showcase-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .showcase-title {
+            text-align: center;
+            color: #2F4F4F;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .button-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #F9F7F3;
+            border-radius: 8px;
+            border-left: 4px solid #6F4E37;
+        }
+        .section-title {
+            color: #6F4E37;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .button-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .button-description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .test-controls {
+            background: #2F4F4F;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .test-controls h3 {
+            margin-top: 0;
+            color: #C58E71;
+        }
+        .console-command {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 4px 0;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .console-command:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-container">
+        <h1 class="showcase-title">🌸 Botanical Button Showcase</h1>
+        
+        <div class="button-section">
+            <div class="section-title">🌟 Hero Buttons</div>
+            <div class="button-row">
+                <a href="#" class="hero-btn" data-button-component="hero" data-button-id="demo-hero">了解更多</a>
+                <a href="#" class="hero-btn" data-button-component="hero" data-button-id="demo-hero-2">立即開始</a>
+            </div>
+            <div class="button-description">Floral corner patterns with vine-like crossing lines</div>
+        </div>
+
+        <div class="button-section">
+            <div class="section-title">🌿 Course Buttons</div>
+            <div class="button-row">
+                <a href="#" class="course-btn" data-button-component="course" data-button-id="demo-course-1">查看詳情</a>
+                <a href="#" class="course-btn" data-button-component="course" data-button-id="demo-course-2">報名課程</a>
+                <a href="#" class="course-btn" data-button-component="course" data-button-id="demo-course-3">了解更多</a>
+            </div>
+            <div class="button-description">Delicate leaf patterns in corners with subtle grid lines</div>
+        </div>
+
+        <div class="button-section">
+            <div class="section-title">🌺 Proposal Buttons</div>
+            <div class="button-row">
+                <a href="#" class="proposal-btn" data-button-component="proposal" data-button-id="demo-proposal-1">了解更多</a>
+                <a href="#" class="proposal-btn" data-button-component="proposal" data-button-id="demo-proposal-2">進入</a>
+                <a href="#" class="proposal-btn" data-button-component="proposal" data-button-id="demo-proposal-3">探索更多</a>
+            </div>
+            <div class="button-description">Flowing vine patterns with diagonal mesh overlay</div>
+        </div>
+
+        <div class="button-section">
+            <div class="section-title">🌹 Decoration Buttons</div>
+            <div class="button-row">
+                <a href="#" class="decor-btn" data-button-component="decor" data-button-id="demo-decor-1">聯絡我們</a>
+                <a href="#" class="decor-btn-large" data-button-component="decor-large" data-button-id="demo-decor-2">立即預約諮詢</a>
+            </div>
+            <div class="button-description">Elegant botanical frames with border lines</div>
+        </div>
+
+        <div class="button-section">
+            <div class="section-title">🌸 Footer & Header Buttons</div>
+            <div class="button-row">
+                <button type="button" class="footer-btn" data-button-component="footer" data-button-id="demo-footer">訂閱</button>
+                <button type="button" class="lang-btn" data-button-component="language" data-button-id="demo-lang">繁體中文 ▾</button>
+                <button type="button" class="currency-btn" data-button-component="currency" data-button-id="demo-currency">$ TWD ▾</button>
+            </div>
+            <div class="button-description">Refined patterns with delicate borders and minimalist accents</div>
+        </div>
+
+        <div class="test-controls">
+            <h3>🧪 Component System Testing</h3>
+            <p>Open browser DevTools console and click these commands to test:</p>
+            
+            <div class="console-command" onclick="copyToClipboard('ButtonTests.demo()')">
+                ButtonTests.demo()
+            </div>
+            <div class="console-command" onclick="copyToClipboard('ButtonTests.runAllTests()')">
+                ButtonTests.runAllTests()
+            </div>
+            <div class="console-command" onclick="copyToClipboard('buttonManager.debug()')">
+                buttonManager.debug()
+            </div>
+            <div class="console-command" onclick="copyToClipboard('buttonManager.exportAnalytics()')">
+                buttonManager.exportAnalytics()
+            </div>
+            <div class="console-command" onclick="copyToClipboard('buttonManager.getButtonsByType(\"course\")')">
+                buttonManager.getButtonsByType("course")
+            </div>
+            
+            <p style="margin-top: 16px; font-size: 14px; opacity: 0.8;">
+                💡 Hover over any button to see the botanical animations in action!
+            </p>
+        </div>
+    </div>
+
+    <!-- Load Button Components -->
+    <script src="buttons.js"></script>
+    <script src="button-config.js"></script>
+    <script src="button-manager.js"></script>
+    <script src="button-tests.js"></script>
+    <script src="quick-check.js"></script>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                console.log('📋 Copied to clipboard:', text);
+                alert('Command copied to clipboard! Paste it in the console.');
+            });
+        }
+
+        // Auto-run quick check when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                console.log('🌸 Botanical Button Showcase loaded!');
+                console.log('Try hovering over the buttons to see the decorations animate.');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

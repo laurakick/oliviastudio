@@ -4,34 +4,37 @@
   <!-- Meta & SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olivia花藝工作室 – 線上乾燥花與永生花設計課程、美學提案、花藝佈置</title>
+  <title>奧莉花藝 – 線上乾燥花與永生花設計課程、美學提案、花藝佈置</title>
   <meta
     name="description"
-    content="Olivia花藝工作室 提供專業乾燥花與永生花設計課程、美學提案與客製化活動餐會佈置服務，讓您與花共生、似花綻放。"
+    content="奧莉花藝 提供專業乾燥花與永生花設計課程、美學提案與客製化活動餐會佈置服務，讓您與花共生、似花綻放。"
   />
   <!-- Open Graph -->
-  <meta property="og:title" content="Olivia花藝工作室" />
+  <meta property="og:title" content="奧莉花藝" />
   <meta
     property="og:description"
     content="線上乾燥花與永生花設計課程、美學提案與客製化活動餐會佈置服務。"
   />
   <meta property="og:image" content="image/olivia_heroimage.jpg" />
   <meta property="og:url" content="https://olivia-studio.tw/" />
-  <!-- Fonts -->
-  <link
+  <!-- Fonts -->  <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Playfair+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="font/fonts.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">  <!-- Button Components -->
+  <script src="components/buttons.js"></script>
+  <script src="components/button-config.js"></script>
+  <script src="components/button-manager.js"></script>
+  <script src="components/button-tests.js"></script>
 </head>
 <body>
   <!-- Header & Navigation -->
   <header class="site-header fade-in-section">
     <div class="logo-container">
       <a href="/" class="logo">
-        <img src="image/olivia_logo.png" alt="Olivia花藝工作室 Logo" />
-        <span class="logo-text">Olivia花藝工作室</span>
+        <img src="image/olivia_logo2.png" alt="Olivia花藝工作室 Logo" />
+        <span class="logo-text">奧莉花藝</span>
       </a>
     </div>
     <nav class="main-nav">
@@ -48,17 +51,16 @@
         <li><a href="portfolio.html">活動餐會佈置</a></li>
         <li><a href="contact.html">聯絡我們</a></li>
       </ul>
-    </nav>
-    <div class="header-controls">
+    </nav>    <div class="header-controls">
       <div class="language-selector">
-        <button class="lang-btn">繁體中文 ▾</button>
+        <button class="lang-btn" data-button-component="language" data-button-id="header-language">繁體中文 ▾</button>
         <ul class="lang-menu">
           <li><a href="?lang=en">English</a></li>
           <li><a href="?lang=zh-TW">繁體中文</a></li>
         </ul>
       </div>
       <div style="display:none" class="currency-selector">
-        <button class="currency-btn">$ TWD ▾</button>
+        <button class="currency-btn" data-button-component="currency" data-button-id="header-currency">$ TWD ▾</button>
         <ul class="currency-menu">
           <li><a href="?currency=USD">$ USD</a></li>
           <li><a href="?currency=TWD">$ TWD</a></li>
@@ -78,12 +80,11 @@
       <p class="hero-subtitle">
         成為妳的解憂秘方<br />
         培養專業花藝師的溫暖園地
-      </p>
-      <blockquote class="hero-quote">
+      </p>      <blockquote class="hero-quote">
         Live with flowers, bloom like a flower.<br />
         「與花共生、似花綻放。」
       </blockquote>
-      <a href="#tagline" class="hero-btn">了解更多</a>
+      <a href="#tagline" class="hero-btn" data-button-component="hero" data-button-id="hero-learn-more">了解更多</a>
     </div>
   </section>
 
@@ -105,11 +106,10 @@
         <!-- Course 1 -->
         <div class="course-card">
           <img src="image/S__14352437.jpg" alt="花藝課程 1" class="course-image" />
-          <h3 class="course-title">基礎花藝課程</h3>
-          <p class="course-description">
+          <h3 class="course-title">基礎花藝課程</h3>          <p class="course-description">
             學習基本的花材選擇與製作技巧，打造屬於自己的花藝作品。
           </p>
-          <a href="courses.html" class="course-btn">查看詳情</a>
+          <a href="courses.html" class="course-btn" data-button-component="course" data-button-id="course-basic">查看詳情</a>
         </div>
         <!-- Course 2 -->
         <div class="course-card">
@@ -118,7 +118,7 @@
           <p class="course-description">
             為想要投身花藝產業的您提供專業培訓與創業指導。
           </p>
-          <a href="business.html" class="course-btn">查看詳情</a>
+          <a href="business.html" class="course-btn" data-button-component="course" data-button-id="course-business">查看詳情</a>
         </div>
         <!-- Course 3 -->
         <div class="course-card">
@@ -127,7 +127,7 @@
           <p class="course-description">
             深入學習花藝設計理念與技巧，提升創作層次與美感表達。
           </p>
-          <a href="courses.html" class="course-btn">查看詳情</a>
+          <a href="courses.html" class="course-btn" data-button-component="course" data-button-id="course-advanced">查看詳情</a>
         </div>
       </div>
     </div>
@@ -146,12 +146,11 @@
         <div class="proposal-content">
           <h3 class="proposal-title">
             花藝設計服務<br /><span class="en-subtitle">Floral Design Services</span>
-          </h3>
-          <p class="proposal-text">
+          </h3>          <p class="proposal-text">
             提供專業的花藝設計服務，為您的特殊場合創造獨特的花卉裝飾。<br />
             從概念發想到實際製作，我們用心為每一個委託案打造專屬的美學體驗。
           </p>
-          <a href="services.html" class="proposal-btn">了解更多</a>
+          <a href="services.html" class="proposal-btn" data-button-component="proposal" data-button-id="proposal-services">了解更多</a>
         </div>
       </div>
       <!-- Proposal 2: 課程花絮 -->
@@ -168,7 +167,7 @@
             記錄學員們在課堂中的精彩時刻與美麗作品。<br />
             每一張照片都訴說著花藝學習的快樂與成長，見證每個人與花的美好相遇。
           </p>
-          <a href="gallery.html" class="proposal-btn">進入</a>
+          <a href="gallery.html" class="proposal-btn" data-button-component="proposal" data-button-id="proposal-gallery">進入</a>
         </div>
       </div>
       <!-- Proposal 3: 作品集 -->
@@ -185,7 +184,7 @@
             欣賞我們的精美花藝創作作品，每一件作品都承載著獨特的設計理念。<br />
             從日常擺設到特殊場合裝飾，展現花藝的多樣魅力與無限可能。
           </p>
-          <a href="portfolio.html" class="proposal-btn">探索更多</a>
+          <a href="portfolio.html" class="proposal-btn" data-button-component="proposal" data-button-id="proposal-portfolio">探索更多</a>
         </div>
       </div>
     </div>
@@ -224,19 +223,18 @@
         <div class="decor-text-block">
           <h3 class="decor-subheading">
             客製化服務<br /><span class="en-subsubtitle">Customized Decoration</span>
-          </h3>
-          <p class="decor-text">
+          </h3>          <p class="decor-text">
             根據您的需求與喜好，量身打造專屬的花藝佈置方案。<br />
             無論是婚禮、生日派對或企業活動，我們都能為您創造難忘的視覺饗宴。
           </p>
-          <a href="contact.html" class="decor-btn">聯絡我們</a>
+          <a href="contact.html" class="decor-btn" data-button-component="decor" data-button-id="decor-contact">聯絡我們</a>
         </div>
       </div>
       <p class="section-text-secondary">
         多元的主題佈置服務：<br />
         無論是華麗的宴會、溫馨的家庭聚會，還是浪漫的婚禮現場，我們都期待能以花藝和創意巧思為每一個佈置注入靈魂與色彩。
       </p>
-      <a href="contact.html" class="decor-btn-large">立即預約諮詢</a>
+      <a href="contact.html" class="decor-btn-large" data-button-component="decor-large" data-button-id="decor-consultation">立即預約諮詢</a>
     </div>
   </section>
 
@@ -268,20 +266,19 @@
           高雄市鼓山區華泰路317號<br />
           （全預約制）<br />
           Tel: <a href="tel:+886939733203">0939 733 203</a><br />
-          Email: <a href="mailto:service@olivia-studio.tw">service@olivia-studio.tw</a>
+          Email: <a href="mailto:hanaya.olivia@gmail.com">hanaya.olivia@gmail.com</a>
         </address>
       </div>
       <!-- Column 4: 訂閱消息 -->
       <div class="footer-column">
-        <h4 class="footer-heading">訂閱消息</h4>
-        <form class="newsletter-form">
+        <h4 class="footer-heading">訂閱消息</h4>        <form class="newsletter-form">
           <input
             type="email"
             name="email"
             placeholder="輸入您的電子郵件"
             required
           />
-          <button type="submit" class="footer-btn">訂閱</button>
+          <button type="submit" class="footer-btn" data-button-component="footer" data-button-id="footer-subscribe">訂閱</button>
         </form>
         <div class="social-icons">
           <a
