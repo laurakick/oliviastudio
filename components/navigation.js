@@ -18,7 +18,7 @@ class NavigationComponent {
               </ul>
             </li>
             <li><a href="courses.html">課程</a></li>
-            <li><a href="services.html">專業花藝設計</a></li>
+            <li><a href="services.html">花藝設計</a></li>
             <li><a href="portfolio.html">活動餐會佈置</a></li>
             <li><a href="contact.html">聯絡我們</a></li>
           </ul>
