@@ -72,8 +72,8 @@ The proposal images were implemented using CSS `background-image` property but l
 
 ### Live Server Testing (Port 5500)
 - **Main Site**: `http://localhost:5500/index.html`
-- **Comprehensive Test**: `http://localhost:5500/test-mobile-live.html`
-- **Basic Test**: `http://localhost:5500/test-mobile-proposals.html`
+- **Comprehensive Test**: `http://localhost:5500/copilot/test-mobile-live.html`
+- **Basic Test**: `http://localhost:5500/copilot/test-mobile-proposals.html`
 
 ### Test Files Created
 - `test-mobile-live.html` - **Comprehensive Live Server test page**
@@ -159,8 +159,8 @@ The proposal images were implemented using CSS `background-image` property but l
 
 ### Key Testing URLs
 - 🌐 **Main Site**: http://localhost:5500/index.html
-- 🧪 **Test Page**: http://localhost:5500/test-mobile-live.html
-- 📱 **Mobile Debug**: http://localhost:5500/test-mobile-proposals.html
+- 🧪 **Test Page**: http://localhost:5500/copilot/test-mobile-live.html
+- 📱 **Mobile Debug**: http://localhost:5500/copilot/test-mobile-proposals.html
 
 ---
 *Fix applied and tested on port 5500 - Olivia Studio Mobile Image Fix*
