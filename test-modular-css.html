@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Modular System Test</title>
+    <link rel="stylesheet" href="style-new.css">
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: var(--font-primary);
+        }
+        .test-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 2px solid var(--color-primary);
+            border-radius: 8px;
+            background: var(--color-background);
+        }
+        .test-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .test-description {
+            color: var(--color-text-secondary);
+            margin-bottom: 15px;
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .visual-check {
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="test-title" style="text-align: center; font-size: 2.5rem;">CSS Modular System Test</h1>
+        <p style="text-align: center; color: var(--color-text-secondary); margin-bottom: 40px;">
+            Testing all modules: Base, Header, Hero, Sections, Buttons, Botanical, Button Effects, Woven Borders, Legacy, Responsive
+        </p>
+
+        <!-- Base Module Test -->
+        <div class="test-section">
+            <h2 class="test-title">1. Base Module (base.css)</h2>
+            <p class="test-description">CSS Reset, Global Styles, Utilities</p>
+            <div class="test-grid">
+                <div class="visual-check">
+                    <div class="fade-in-up">Fade In Animation</div>
+                </div>
+                <div class="visual-check">
+                    <span class="text-gradient">Gradient Text</span>
+                </div>
+                <div class="visual-check">
+                    <div class="glass-effect">Glass Effect</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button Module Test -->
+        <div class="test-section">
+            <h2 class="test-title">2. Button System (buttons.css + button-effects.css)</h2>
+            <p class="test-description">All button types with hover effects</p>
+            <div class="test-grid">
+                <button class="hero-btn">Hero Button</button>
+                <button class="course-btn">Course Button</button>
+                <button class="proposal-btn">Proposal Button</button>
+                <button class="decoration-btn">Decoration Button</button>
+                <button class="footer-btn">Footer Button</button>
+            </div>
+        </div>
+
+        <!-- Botanical Module Test -->
+        <div class="test-section">
+            <h2 class="test-title">3. Botanical Decorations (botanical.css)</h2>
+            <p class="test-description">SVG patterns and animations</p>
+            <div class="test-grid">
+                <div class="visual-check botanical-breathe">Breathing Animation</div>
+                <div class="visual-check botanical-leaf">Leaf Pattern</div>
+                <div class="visual-check botanical-vine">Vine Growth</div>
+            </div>
+        </div>
+
+        <!-- Woven Borders Test -->
+        <div class="test-section">
+            <h2 class="test-title">4. Woven Borders (woven-borders.css)</h2>
+            <p class="test-description">Linear gradient mesh patterns</p>
+            <div class="test-grid">
+                <div class="visual-check woven-border-light">Light Woven</div>
+                <div class="visual-check woven-border-dark">Dark Woven</div>
+                <div class="visual-check ornate-frame">Ornate Frame</div>
+            </div>
+        </div>
+
+        <!-- Header Components Test -->
+        <div class="test-section">
+            <h2 class="test-title">5. Header Components (header.css)</h2>
+            <p class="test-description">Navigation and controls</p>
+            <div style="background: var(--color-surface); padding: 15px; border-radius: 8px;">
+                <nav style="display: flex; gap: 20px; align-items: center;">
+                    <div class="nav-item">Home</div>
+                    <div class="nav-item">About</div>
+                    <div class="nav-item">Services</div>
+                    <div class="language-selector">中文</div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Responsive Test -->
+        <div class="test-section">
+            <h2 class="test-title">6. Responsive Design (responsive.css)</h2>
+            <p class="test-description">Resize browser window to test breakpoints</p>
+            <div class="responsive-grid">
+                <div class="visual-check">Mobile: < 768px</div>
+                <div class="visual-check">Tablet: 768px - 1024px</div>
+                <div class="visual-check">Desktop: > 1024px</div>
+            </div>
+        </div>
+
+        <!-- CSS Variables Test -->
+        <div class="test-section">
+            <h2 class="test-title">7. CSS Variables Test</h2>
+            <p class="test-description">Check if all CSS custom properties are loaded</p>
+            <div class="test-grid">
+                <div class="visual-check" style="background: var(--color-primary); color: white;">Primary Color</div>
+                <div class="visual-check" style="background: var(--color-secondary); color: white;">Secondary Color</div>
+                <div class="visual-check" style="background: var(--color-accent); color: white;">Accent Color</div>
+                <div class="visual-check" style="font-family: var(--font-primary);">Primary Font</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test script to validate CSS loading
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== CSS Modular System Test ===');
+            
+            // Check if CSS custom properties are defined
+            const testElement = document.createElement('div');
+            document.body.appendChild(testElement);
+            
+            const computedStyle = getComputedStyle(testElement);
+            
+            // Test CSS variables
+            const cssVars = [
+                '--color-primary',
+                '--color-secondary', 
+                '--color-accent',
+                '--font-primary',
+                '--border-radius',
+                '--transition-speed'
+            ];
+            
+            cssVars.forEach(varName => {
+                const value = computedStyle.getPropertyValue(varName);
+                console.log(`${varName}: ${value || 'NOT DEFINED'}`);
+            });
+            
+            document.body.removeChild(testElement);
+            
+            // Test animations
+            console.log('Testing animations...');
+            const animatedElements = document.querySelectorAll('.fade-in-up, .botanical-breathe');
+            console.log(`Found ${animatedElements.length} animated elements`);
+            
+            console.log('=== Test Complete ===');
+        });
+    </script>
+</body>
+</html>

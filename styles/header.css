@@ -1,0 +1,278 @@
+/* ==========================================
+   Header & Navigation Styles
+   ========================================== */
+
+/* Main Site Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(249, 247, 243, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Logo Section */
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2F4F4F;
+}
+
+/* Main Navigation */
+.main-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li > a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2F4F4F;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-list li > a:hover {
+  color: #C58E71;
+}
+
+/* Dropdown Submenus */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E5E0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 180px;
+  display: none;
+  z-index: 1001;
+}
+
+.submenu li a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #2F4F4F;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background-color: #F9F7F3;
+  color: #C58E71;
+}
+
+.nav-list li:hover > .submenu {
+  display: block;
+}
+
+/* Header Controls */
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+.language-selector,
+.currency-selector {
+  position: relative;
+  margin-right: 16px;
+}
+
+/* Language and Currency Buttons */
+.lang-btn,
+.currency-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #2F4F4F;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  position: relative;
+  overflow: visible;
+}
+
+/* Delicate botanical underline for header buttons */
+.lang-btn::after,
+.currency-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 4'%3E%3Cpath d='M2,2 Q4,1 6,2 Q8,1 10,2 Q12,1 14,2 Q16,1 18,2 Q20,1 22,2 Q24,1 26,2 Q28,1 30,2 Q32,1 34,2 Q36,1 38,2' stroke='%236F4E37' stroke-width='0.5' fill='none' opacity='0.6'/%3E%3Cpath d='M4,2 Q5,1.5 6,2 Q7,1.5 8,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3Cpath d='M12,2 Q13,1.5 14,2 Q15,1.5 16,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3Cpath d='M20,2 Q21,1.5 22,2 Q23,1.5 24,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3Cpath d='M28,2 Q29,1.5 30,2 Q31,1.5 32,2' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover::after,
+.currency-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1.1);
+}
+
+.lang-btn:hover,
+.currency-btn:hover {
+  color: #C58E71;
+}
+
+/* Dropdown Menus */
+.lang-menu,
+.currency-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #E8E5E0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 120px;
+  display: none;
+  z-index: 1001;
+}
+
+.lang-menu.open,
+.currency-menu.open {
+  display: block;
+}
+
+.lang-menu li a,
+.currency-menu li a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #2F4F4F;
+  white-space: nowrap;
+}
+
+.lang-menu li a:hover,
+.currency-menu li a:hover {
+  background-color: #F9F7F3;
+  color: #C58E71;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #2F4F4F;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #2F4F4F;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -6px;
+}
+
+.hamburger::after {
+  bottom: -6px;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 1023px) {
+  .nav-toggle {
+    display: block;
+  }
+  
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-top: 1px solid #E8E5E0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  
+  .main-nav.nav-open {
+    display: block;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px 20px;
+  }
+  
+  .nav-list li {
+    border-bottom: 1px solid #F0F0F0;
+  }
+  
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-list li > a {
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+  
+  .submenu {
+    position: static;
+    display: none;
+    background-color: #F9F7F3;
+    border: none;
+    box-shadow: none;
+    margin-top: 8px;
+    padding: 8px 16px;
+  }
+  
+  .nav-list li:hover > .submenu {
+    display: block;
+  }
+}

@@ -1,0 +1,239 @@
+/* ==========================================
+   Botanical Button Decorations
+   ========================================== */
+
+/* Apply botanical decoration to hero buttons */
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2,2 Q3,1 4,2 Q3,3 2,2 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M12,2 Q13,1 14,2 Q13,3 12,2 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M2,14 Q3,13 4,14 Q3,15 2,14 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M12,14 Q13,13 14,14 Q13,15 12,14 Z' fill='%236F4E37' opacity='0.7'/%3E%3C/svg%3E"),
+    linear-gradient(45deg, transparent 45%, #6F4E37 47%, #6F4E37 48%, transparent 50%),
+    linear-gradient(-45deg, transparent 45%, #6F4E37 47%, #6F4E37 48%, transparent 50%);
+  background-size: 16px 16px, 8px 8px, 8px 8px;
+  background-position: 0px 0px, 0px 0px, 0px 0px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover::before {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Delicate leaf border for course buttons */
+.course-btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2,2 Q2.5,1.5 3,2 Q2.5,2.5 2,2 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M9,2 Q9.5,1.5 10,2 Q9.5,2.5 9,2 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M2,10 Q2.5,9.5 3,10 Q2.5,10.5 2,10 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M9,10 Q9.5,9.5 10,10 Q9.5,10.5 9,10 Z' fill='%236F4E37' opacity='0.6'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, transparent 47%, #6F4E37 48%, #6F4E37 49%, transparent 50%),
+    linear-gradient(0deg, transparent 47%, #6F4E37 48%, #6F4E37 49%, transparent 50%);
+  background-size: 12px 12px, 3px 3px, 3px 3px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.course-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+/* Flowing vine decoration for proposal buttons */
+.proposal-btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 12'%3E%3Cpath d='M2,2 Q4,1 6,2 Q8,3 10,2 Q12,1 14,2 Q16,3 18,2' stroke='%236F4E37' stroke-width='0.5' fill='none' opacity='0.7'/%3E%3Cpath d='M2,10 Q4,9 6,10 Q8,11 10,10 Q12,9 14,10 Q16,11 18,10' stroke='%236F4E37' stroke-width='0.5' fill='none' opacity='0.7'/%3E%3Cpath d='M3,6 Q5,5.5 7,6 Q9,6.5 11,6 Q13,5.5 15,6 Q17,6.5 19,6' stroke='%236F4E37' stroke-width='0.3' fill='none' opacity='0.5'/%3E%3C/svg%3E"),
+    linear-gradient(45deg, transparent 46%, #6F4E37 47%, #6F4E37 48%, transparent 49%),
+    linear-gradient(-45deg, transparent 46%, #6F4E37 47%, #6F4E37 48%, transparent 49%);
+  background-size: 20px 12px, 6px 6px, 6px 6px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.proposal-btn:hover::before {
+  opacity: 0.6;
+  transform: scale(1.02) rotate(1deg);
+}
+
+/* Elegant botanical frames for decoration buttons */
+.decor-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2,2 Q3,1.5 4,2 Q3.5,2.5 3,2.5 Q2.5,3 2,2 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M10,2 Q11,1.5 12,2 Q11.5,2.5 11,2.5 Q10.5,3 10,2 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M2,12 Q3,11.5 4,12 Q3.5,12.5 3,12.5 Q2.5,13 2,12 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M10,12 Q11,11.5 12,12 Q11.5,12.5 11,12.5 Q10.5,13 10,12 Z' fill='%236F4E37' opacity='0.6'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, #6F4E37 0px, #6F4E37 1px, transparent 1px),
+    linear-gradient(0deg, #6F4E37 0px, #6F4E37 1px, transparent 1px);
+  background-size: 14px 14px, 100% 1px, 1px 100%;
+  background-position: 0 0, 0 0, 0 0;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.decor-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.03);
+}
+
+/* Enhanced decoration for large buttons */
+.decor-btn-large::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M3,3 Q4.5,2 6,3 Q5,4 4,4 Q3,5 3,3 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M12,3 Q13.5,2 15,3 Q14,4 13,4 Q12,5 12,3 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M3,15 Q4.5,14 6,15 Q5,16 4,16 Q3,17 3,15 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M12,15 Q13.5,14 15,15 Q14,16 13,16 Q12,17 12,15 Z' fill='%236F4E37' opacity='0.7'/%3E%3Cpath d='M9,2 Q9.5,1.5 10,2 Q9.5,2.5 9,2 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M2,9 Q2.5,8.5 3,9 Q2.5,9.5 2,9 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M15,9 Q15.5,8.5 16,9 Q15.5,9.5 15,9 Z' fill='%236F4E37' opacity='0.5'/%3E%3Cpath d='M9,16 Q9.5,15.5 10,16 Q9.5,16.5 9,16 Z' fill='%236F4E37' opacity='0.5'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, transparent 47%, #6F4E37 48%, #6F4E37 49%, transparent 50%),
+    linear-gradient(0deg, transparent 47%, #6F4E37 48%, #6F4E37 49%, transparent 50%);
+  background-size: 18px 18px, 4px 4px, 4px 4px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.decor-btn-large:hover::before {
+  opacity: 0.6;
+  transform: scale(1.04);
+}
+
+/* Subtle botanical accent for footer button */
+.footer-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M1,1 Q2,0.5 3,1 Q2.5,2 2,1.5 Q1.5,2.5 1,2 Q0.5,1.5 1,1 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M9,1 Q10,0.5 11,1 Q10.5,2 10,1.5 Q9.5,2.5 9,2 Q8.5,1.5 9,1 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M1,9 Q2,8.5 3,9 Q2.5,10 2,9.5 Q1.5,10.5 1,10 Q0.5,9.5 1,9 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M9,9 Q10,8.5 11,9 Q10.5,10 10,9.5 Q9.5,10.5 9,10 Q8.5,9.5 9,9 Z' fill='%236F4E37' opacity='0.6'/%3E%3Cpath d='M6,2 Q6.5,1.5 7,2 Q6.5,2.5 6,2 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M2,6 Q2.5,5.5 3,6 Q2.5,6.5 2,6 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M9,6 Q9.5,5.5 10,6 Q9.5,6.5 9,6 Z' fill='%236F4E37' opacity='0.4'/%3E%3Cpath d='M6,10 Q6.5,9.5 7,10 Q6.5,10.5 6,10 Z' fill='%236F4E37' opacity='0.4'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%),
+    linear-gradient(0deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%);
+  background-size: 12px 12px, 4px 4px, 4px 4px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 0 6px 6px 0;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover::before {
+  opacity: 0.35;
+  transform: scale(1.02);
+}
+
+/* Enhanced Botanical Button Animations */
+@keyframes botanical-breathe {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.5; 
+    transform: scale(1.01); 
+  }
+}
+
+@keyframes floral-shimmer {
+  0%, 100% { 
+    background-position: 0% 0%; 
+  }
+  50% { 
+    background-position: 100% 100%; 
+  }
+}
+
+@keyframes vine-grow {
+  0% { 
+    transform: scale(0.95) rotate(-1deg); 
+  }
+  50% { 
+    transform: scale(1.02) rotate(1deg); 
+  }
+  100% { 
+    transform: scale(0.95) rotate(-1deg); 
+  }
+}
+
+/* Apply subtle animation to all botanical button decorations */
+.hero-btn::before,
+.course-btn::before,
+.proposal-btn::before,
+.decor-btn::before,
+.decor-btn-large::before,
+.footer-btn::before {
+  animation: botanical-breathe 6s ease-in-out infinite;
+}
+
+/* Special hover effects for enhanced interactivity */
+.hero-btn:hover::before {
+  animation: floral-shimmer 2s ease-in-out infinite, botanical-breathe 3s ease-in-out infinite;
+}
+
+.proposal-btn:hover::before {
+  animation: vine-grow 2.5s ease-in-out infinite;
+}
+
+.decor-btn-large:hover::before {
+  animation: botanical-breathe 1.5s ease-in-out infinite, floral-shimmer 4s ease-in-out infinite;
+}
+
+/* Seasonal color variations (can be activated via CSS classes) */
+.botanical-spring .hero-btn::before,
+.botanical-spring .course-btn::before,
+.botanical-spring .proposal-btn::before {
+  filter: hue-rotate(30deg) brightness(1.1);
+}
+
+.botanical-autumn .decor-btn::before,
+.botanical-autumn .decor-btn-large::before {
+  filter: hue-rotate(-15deg) saturate(1.2);
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-btn::before,
+  .course-btn::before,
+  .proposal-btn::before,
+  .decor-btn::before,
+  .decor-btn-large::before,
+  .footer-btn::before {
+    animation: none;
+  }
+  
+  .lang-btn::after,
+  .currency-btn::after {
+    transition: opacity 0.3s ease;
+  }
+}

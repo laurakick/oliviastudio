@@ -1,0 +1,466 @@
+/* ==========================================
+   Woven Borders Module
+   Sophisticated mesh and linear gradient border patterns
+   ========================================== */
+
+/* ==========================================
+   Base Woven Border System
+   ========================================== */
+
+/* Base woven border mixin for all elements */
+.woven-border {
+  position: relative;
+  overflow: visible;
+}
+
+.woven-border::before,
+.woven-border::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   Mesh Pattern Variations
+   ========================================== */
+
+/* Basic mesh pattern - diagonal crossing lines */
+.mesh-basic::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    linear-gradient(45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(-45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(90deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%),
+    linear-gradient(0deg, transparent 48%, #6F4E37 49%, #6F4E37 51%, transparent 52%);
+  background-size: 12px 12px, 12px 12px, 8px 8px, 8px 8px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Fine mesh pattern - smaller grid */
+.mesh-fine::before {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(45deg, transparent 46%, #6F4E37 47%, #6F4E37 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 46%, #6F4E37 47%, #6F4E37 49%, transparent 50%);
+  background-size: 8px 8px, 8px 8px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Dense mesh pattern - tighter weave */
+.mesh-dense::before {
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(90deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%),
+    linear-gradient(0deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%);
+  background-size: 4px 4px, 4px 4px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* ==========================================
+   Repeating Pattern Variations
+   ========================================== */
+
+/* Diagonal striped pattern - like fabric weave */
+.pattern-diagonal::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    repeating-linear-gradient(45deg, transparent 0px, transparent 2px, #6F4E37 2px, #6F4E37 3px, transparent 3px, transparent 10px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 2px, #6F4E37 2px, #6F4E37 3px, transparent 3px, transparent 10px);
+  background-size: 7px 7px, 7px 7px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Grid pattern - clean perpendicular lines */
+.pattern-grid::before {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    linear-gradient(90deg, transparent 47%, #6F4E37 48%, #6F4E37 50%, transparent 51%),
+    linear-gradient(0deg, transparent 47%, #6F4E37 48%, #6F4E37 50%, transparent 51%);
+  background-size: 16px 16px, 6px 6px, 6px 6px;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+/* Complex woven pattern - ornate border */
+.pattern-ornate::before {
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    radial-gradient(circle at 20% 20%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 80% 20%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 20% 80%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 80% 80%, #6F4E37 1px, transparent 2px),
+    linear-gradient(45deg, transparent 48%, #6F4E37 49%, #6F4E37 50%, transparent 51%),
+    linear-gradient(-45deg, transparent 48%, #6F4E37 49%, #6F4E37 50%, transparent 51%);
+  background-size: 30px 30px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 12px 12px, 12px 12px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+/* ==========================================
+   Border Frame Patterns
+   ========================================== */
+
+/* Decorative frame - border emphasis */
+.frame-decorative::before {
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: 
+    radial-gradient(circle at 0% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 0% 100%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 100%, #6F4E37 0%, transparent 10%),
+    linear-gradient(0deg, transparent 40%, #6F4E37 41%, #6F4E37 43%, transparent 44%),
+    linear-gradient(90deg, transparent 40%, #6F4E37 41%, #6F4E37 43%, transparent 44%);
+  background-size: 24px 24px, 100% 2px, 2px 100%;
+  background-position: 0 0, 0 0, 0 0;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* ==========================================
+   Hover Effects for Woven Borders
+   ========================================== */
+
+/* Basic mesh hover effects */
+.mesh-basic:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 14px 14px, 14px 14px, 10px 10px, 10px 10px;
+}
+
+.mesh-fine:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 10px 10px, 10px 10px;
+}
+
+.mesh-dense:hover::before {
+  opacity: 0.35;
+  transform: scale(1.02);
+}
+
+/* Pattern hover effects */
+.pattern-diagonal:hover::before {
+  opacity: 0.4;
+  transform: scale(1.03);
+}
+
+.pattern-grid:hover::before {
+  opacity: 0.4;
+  transform: scale(1.03);
+}
+
+.pattern-ornate:hover::before {
+  opacity: 0.6;
+  transform: scale(1.04);
+  background-size: 32px 32px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 14px 14px, 14px 14px;
+}
+
+/* Frame hover effects */
+.frame-decorative:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 26px 26px, 100% 3px, 3px 100%;
+}
+
+/* ==========================================
+   Specific Element Application
+   ========================================== */
+
+/* Hero button woven border */
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: 
+    linear-gradient(45deg, transparent 46%, #6F4E37 47%, #6F4E37 49%, transparent 50%),
+    linear-gradient(-45deg, transparent 46%, #6F4E37 47%, #6F4E37 49%, transparent 50%);
+  background-size: 20px 20px, 8px 8px, 8px 8px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 6px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+/* Course button delicate weave */
+.course-btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    linear-gradient(90deg, transparent 47%, #6F4E37 48%, #6F4E37 50%, transparent 51%),
+    linear-gradient(0deg, transparent 47%, #6F4E37 48%, #6F4E37 50%, transparent 51%);
+  background-size: 16px 16px, 6px 6px, 6px 6px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.25;
+  transition: all 0.3s ease;
+}
+
+/* Proposal button flowing mesh */
+.proposal-btn::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: 
+    repeating-linear-gradient(45deg, transparent 0px, transparent 2px, #6F4E37 2px, #6F4E37 3px, transparent 3px, transparent 10px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 2px, #6F4E37 2px, #6F4E37 3px, transparent 3px, transparent 10px);
+  background-size: 18px 18px, 7px 7px, 7px 7px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 5px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+/* Decoration button ornate frame */
+.decor-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: 
+    radial-gradient(circle at 0% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 0%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 0% 100%, #6F4E37 0%, transparent 10%),
+    radial-gradient(circle at 100% 100%, #6F4E37 0%, transparent 10%),
+    linear-gradient(0deg, transparent 40%, #6F4E37 41%, #6F4E37 43%, transparent 44%),
+    linear-gradient(90deg, transparent 40%, #6F4E37 41%, #6F4E37 43%, transparent 44%);
+  background-size: 24px 24px, 100% 2px, 2px 100%;
+  background-position: 0 0, 0 0, 0 0;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 6px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+/* Large decoration button complex weave */
+.decor-btn-large::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    radial-gradient(circle at 20% 20%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 80% 20%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 20% 80%, #6F4E37 1px, transparent 2px),
+    radial-gradient(circle at 80% 80%, #6F4E37 1px, transparent 2px),
+    linear-gradient(45deg, transparent 48%, #6F4E37 49%, #6F4E37 50%, transparent 51%),
+    linear-gradient(-45deg, transparent 48%, #6F4E37 49%, #6F4E37 50%, transparent 51%);
+  background-size: 30px 30px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 12px 12px, 12px 12px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0.35;
+  transition: all 0.3s ease;
+}
+
+/* Footer button subtle mesh */
+.footer-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(90deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%),
+    linear-gradient(0deg, transparent 45%, #6F4E37 46%, #6F4E37 47%, transparent 48%);
+  background-size: 12px 12px, 4px 4px, 4px 4px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 0 6px 6px 0;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   Hover States for Button Woven Borders
+   ========================================== */
+
+.hero-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 22px 22px, 10px 10px, 10px 10px;
+}
+
+.course-btn:hover::before {
+  opacity: 0.4;
+  transform: scale(1.03);
+}
+
+.proposal-btn:hover::before {
+  opacity: 0.4;
+  transform: scale(1.03);
+}
+
+.decor-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 26px 26px, 100% 3px, 3px 100%;
+}
+
+.decor-btn-large:hover::before {
+  opacity: 0.6;
+  transform: scale(1.03) rotate(1deg);
+  background-size: 32px 32px, 10px 10px, 10px 10px, 10px 10px, 10px 10px, 14px 14px, 14px 14px;
+}
+
+.footer-btn:hover::before {
+  opacity: 0.35;
+  transform: scale(1.02);
+}
+
+/* ==========================================
+   Utility Classes for Custom Woven Borders
+   ========================================== */
+
+/* Apply basic woven border to any element */
+.woven-basic {
+  position: relative;
+  overflow: visible;
+}
+
+.woven-basic::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: 
+    linear-gradient(45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%),
+    linear-gradient(-45deg, transparent 30%, #6F4E37 31%, #6F4E37 33%, transparent 34%);
+  background-size: 12px 12px, 12px 12px;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.woven-basic:hover::before {
+  opacity: 0.4;
+  transform: scale(1.02);
+}
+
+/* Dense woven border utility */
+.woven-dense {
+  position: relative;
+  overflow: visible;
+}
+
+.woven-dense::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: 
+    linear-gradient(90deg, transparent 45%, #6F4E37 47%, #6F4E37 48%, transparent 50%),
+    linear-gradient(0deg, transparent 45%, #6F4E37 47%, #6F4E37 48%, transparent 50%);
+  background-size: 6px 6px, 6px 6px;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.woven-dense:hover::before {
+  opacity: 0.3;
+  transform: scale(1.01);
+}
+
+/* ==========================================
+   Accessibility and Motion Preferences
+   ========================================== */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .woven-border::before,
+  .woven-border::after,
+  .mesh-basic::before,
+  .mesh-fine::before,
+  .mesh-dense::before,
+  .pattern-diagonal::before,
+  .pattern-grid::before,
+  .pattern-ornate::before,
+  .frame-decorative::before,
+  .hero-btn::before,
+  .course-btn::before,
+  .proposal-btn::before,
+  .decor-btn::before,
+  .decor-btn-large::before,
+  .footer-btn::before,
+  .woven-basic::before,
+  .woven-dense::before {
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .woven-border::before,
+  .woven-border::after,
+  .mesh-basic::before,
+  .mesh-fine::before,
+  .mesh-dense::before,
+  .pattern-diagonal::before,
+  .pattern-grid::before,
+  .pattern-ornate::before,
+  .frame-decorative::before,
+  .hero-btn::before,
+  .course-btn::before,
+  .proposal-btn::before,
+  .decor-btn::before,
+  .decor-btn-large::before,
+  .footer-btn::before,
+  .woven-basic::before,
+  .woven-dense::before {
+    opacity: 0.6;
+  }
+}

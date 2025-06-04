@@ -1,0 +1,27 @@
+/* Main CSS File - Orchestrates all style modules */
+/* Import order is important for CSS cascade */
+
+/* 1. Font imports (must be first) */
+@import url('font/fonts.css');
+
+/* 2. Base styles and resets */
+@import url('styles/base.css');
+
+/* 3. Layout and components */
+@import url('styles/header.css');
+@import url('styles/hero.css');
+@import url('styles/sections.css');
+
+/* 4. Button system */
+@import url('styles/buttons.css');
+@import url('styles/button-effects.css');
+
+/* 5. Enhanced decorations */
+@import url('styles/botanical.css');
+@import url('styles/woven-borders.css');
+
+/* 6. Legacy support for other pages */
+@import url('styles/legacy.css');
+
+/* 7. Responsive design (must be last) */
+@import url('styles/responsive.css');

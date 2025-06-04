@@ -1,0 +1,559 @@
+/* ==========================================
+   Responsive Design Module
+   Media queries and mobile optimizations
+   ========================================== */
+
+/* ==========================================
+   Font Size Adjustments
+   ========================================== */
+
+/* Base font size adjustments for different screen sizes */
+@media (max-width: 1023px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   Header & Navigation Responsive
+   ========================================== */
+
+/* Mobile navigation toggle */
+@media (max-width: 1023px) {
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #F9F7F3;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 20px 20px 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-list.open {
+    right: 0;
+  }
+  
+  .nav-list li {
+    margin: 0 0 16px 0;
+    width: 100%;
+  }
+  
+  .nav-list li > a {
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(47, 79, 79, 0.1);
+  }
+  
+  .submenu {
+    position: static;
+    background: none;
+    box-shadow: none;
+    margin-top: 0;
+    padding-left: 16px;
+  }
+  
+  .submenu.open {
+    display: block;
+  }
+  
+  .header-controls {
+    display: none;
+  }
+}
+
+/* ==========================================
+   Hero Section Responsive
+   ========================================== */
+
+@media (max-width: 1023px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .hero-quote {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .hero-quote {
+    font-size: 22px;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* ==========================================
+   Tagline Section Responsive
+   ========================================== */
+
+@media (max-width: 767px) {
+  .tagline-section {
+    padding: 40px 0;
+  }
+  
+  .tagline-section .section-heading {
+    font-size: 28px;
+  }
+  
+  .tagline-section .section-text {
+    font-size: 16px;
+  }
+}
+
+/* ==========================================
+   Courses Section Responsive
+   ========================================== */
+
+@media (max-width: 1023px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-card {
+    margin-bottom: 32px;
+  }
+}
+
+/* ==========================================
+   Proposals Section Responsive
+   ========================================== */
+
+@media (max-width: 1023px) {
+  .proposal-item {
+    grid-template-columns: 1fr;
+  }
+  
+  .proposal-item.reverse .proposal-content {
+    text-align: left;
+  }
+  
+  .proposal-image {
+    height: 300px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .proposal-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .proposal-image {
+    height: 250px;
+    margin-bottom: 24px;
+  }
+  
+  .proposal-title {
+    font-size: 24px;
+  }
+  
+  .proposal-text {
+    font-size: 16px;
+  }
+  
+  .proposal-btn {
+    align-self: flex-start;
+  }
+}
+
+/* ==========================================
+   Event Decorations Responsive
+   ========================================== */
+
+@media (max-width: 1279px) {
+  .decor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .decor-text-block {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .decor-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .decor-image-wrapper {
+    margin-bottom: 24px;
+  }
+  
+  .decor-text-block {
+    margin-bottom: 32px;
+    grid-row: auto;
+  }
+  
+  .decor-image {
+    height: 200px;
+  }
+  
+  .section-text-secondary {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .decor-btn-large {
+    margin-bottom: 24px;
+  }
+}
+
+/* ==========================================
+   Footer Responsive
+   ========================================== */
+
+@media (max-width: 1023px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* ==========================================
+   Legacy Pages Responsive
+   ========================================== */
+
+@media (max-width: 768px) {
+  header:not(.site-header) nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-items-container {
+    grid-template-columns: 1fr;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  section:not(.fade-in-section) {
+    padding: 15px;
+  }
+}
+
+/* ==========================================
+   Container and Layout Responsive
+   ========================================== */
+
+/* Responsive container padding */
+@media (max-width: 1279px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* Section padding adjustments */
+@media (max-width: 767px) {
+  .courses-section,
+  .proposals-section,
+  .event-decor-section {
+    padding: 60px 0;
+  }
+  
+  .tagline-section {
+    padding: 40px 0;
+  }
+}
+
+/* ==========================================
+   Mobile Navigation Hamburger Animation
+   ========================================== */
+
+@media (max-width: 1023px) {
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    transition: 0.3s ease;
+  }
+  
+  .nav-toggle.is-active .hamburger {
+    background: transparent;
+  }
+  
+  .nav-toggle.is-active .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.is-active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* ==========================================
+   Touch Device Optimizations
+   ========================================== */
+
+/* Increase touch targets on mobile */
+@media (max-width: 767px) {
+  .hero-btn,
+  .course-btn,
+  .proposal-btn,
+  .decor-btn,
+  .decor-btn-large,
+  .footer-btn {
+    min-height: 44px;
+    padding: 12px 20px;
+  }
+  
+  .nav-list li > a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .lang-btn,
+  .currency-btn {
+    min-height: 44px;
+    padding: 8px 12px;
+  }
+}
+
+/* ==========================================
+   Print Styles
+   ========================================== */
+
+@media print {
+  /* Hide navigation and interactive elements */
+  .site-header,
+  .nav-toggle,
+  .hero-btn,
+  .course-btn,
+  .proposal-btn,
+  .decor-btn,
+  .decor-btn-large,
+  .footer-btn,
+  .social-icons {
+    display: none !important;
+  }
+  
+  /* Adjust colors for print */
+  .hero-section {
+    background: none;
+    color: #000;
+  }
+  
+  .hero-overlay {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+  }
+  
+  /* Page breaks */
+  .course-card,
+  .proposal-item,
+  .decor-image-wrapper {
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ==========================================
+   High DPI / Retina Display Optimizations
+   ========================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Optimize images and borders for high DPI */
+  .botanical-border::before,
+  .botanical-border::after,
+  .hero-btn::before,
+  .course-btn::before,
+  .proposal-btn::before,
+  .decor-btn::before,
+  .decor-btn-large::before,
+  .footer-btn::before {
+    background-size: 
+      calc(var(--bg-size-1, 20px) * 0.5) calc(var(--bg-size-1, 20px) * 0.5),
+      calc(var(--bg-size-2, 8px) * 0.5) calc(var(--bg-size-2, 8px) * 0.5),
+      calc(var(--bg-size-3, 8px) * 0.5) calc(var(--bg-size-3, 8px) * 0.5);
+  }
+}
+
+/* ==========================================
+   Landscape Orientation Specific
+   ========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 500px;
+    height: auto;
+    padding: 40px 0;
+  }
+  
+  .hero-content {
+    padding: 20px;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .hero-quote {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================
+   Very Small Screens (< 320px)
+   ========================================== */
+
+@media (max-width: 319px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .hero-title {
+    font-size: 24px;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+  }
+  
+  .course-title,
+  .proposal-title {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================
+   Large Desktop Screens (> 1400px)
+   ========================================== */
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 56px;
+  }
+  
+  .hero-subtitle {
+    font-size: 24px;
+  }
+  
+  .hero-quote {
+    font-size: 36px;
+  }
+  
+  .section-heading {
+    font-size: 36px;
+  }
+}
+
+/* ==========================================
+   Accessibility and Motion Preferences
+   ========================================== */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section,
+  .course-image,
+  .decor-image,
+  .gallery img,
+  .gallery-container img,
+  .service-item {
+    transition: none;
+  }
+  
+  .nav-list {
+    transition: none;
+  }
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    transition: none;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .course-card,
+  .proposal-item,
+  .decor-text-block {
+    border: 2px solid #2F4F4F;
+  }
+  
+  .hero-btn,
+  .course-btn,
+  .proposal-btn,
+  .decor-btn,
+  .decor-btn-large,
+  .footer-btn {
+    border: 2px solid #2F4F4F;
+  }
+}

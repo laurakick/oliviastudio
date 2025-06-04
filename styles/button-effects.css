@@ -1,0 +1,277 @@
+/* ==========================================
+   Button Effects & Hover Interactions
+   ========================================== */
+
+/* Hero Button Hover Effects */
+.hero-btn:hover {
+  background: linear-gradient(135deg, #D49A82 0%, #C58E71 50%, #AD7960 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-2px);
+}
+
+.hero-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+  background-size: 22px 22px, 10px 10px, 10px 10px;
+}
+
+/* Course Button Hover Effects */
+.course-btn:hover {
+  background: linear-gradient(45deg, #D49A82 0%, #C58E71 50%, #B68461 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+.course-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+/* Proposal Button Hover Effects */
+.proposal-btn:hover {
+  background: linear-gradient(90deg, #D49A82 0%, #C58E71 30%, #AD7960 70%, #9A785A 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+.proposal-btn:hover::before {
+  opacity: 0.6;
+  transform: scale(1.02) rotate(1deg);
+}
+
+/* Decoration Button Hover Effects */
+.decor-btn:hover {
+  background: linear-gradient(135deg, #D49A82 0%, #B68461 40%, #9A785A 80%, #AD7960 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+.decor-btn:hover::before {
+  opacity: 0.5;
+  transform: scale(1.03);
+}
+
+/* Large Decoration Button Hover Effects */
+.decor-btn-large:hover {
+  background: linear-gradient(45deg, #D49A82 0%, #C58E71 25%, #B68461 50%, #9A785A 75%, #AD7960 100%);
+  box-shadow: 0 4px 12px rgba(111, 78, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+.decor-btn-large:hover::before {
+  opacity: 0.6;
+  transform: scale(1.04);
+}
+
+/* Footer Button Hover Effects */
+.footer-btn:hover {
+  background: linear-gradient(90deg, #D49A82 0%, #C58E71 50%, #B68461 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+.footer-btn:hover::before {
+  opacity: 0.35;
+  transform: scale(1.02);
+}
+
+/* Header Controls Hover Effects */
+.lang-btn:hover::after,
+.currency-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scaleX(1.1);
+}
+
+.lang-btn:hover,
+.currency-btn:hover {
+  color: #C58E71;
+}
+
+/* Navigation Hover Effects */
+.nav-list li > a:hover {
+  color: #C58E71;
+}
+
+.submenu li a:hover {
+  background-color: #F9F7F3;
+  color: #C58E71;
+}
+
+.lang-menu li a:hover,
+.currency-menu li a:hover {
+  background-color: #F9F7F3;
+  color: #C58E71;
+}
+
+/* General Botanical Border Hover Effects */
+.botanical-border:hover::before {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+.botanical-border:hover::after {
+  opacity: 0.6;
+  transform: scale(1.03);
+}
+
+/* SVG Floral Decoration Hover Effects */
+.btn-floral-decoration:hover::before {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Enhanced Button Animations */
+@keyframes botanical-breathe {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.5; 
+    transform: scale(1.01); 
+  }
+}
+
+@keyframes floral-shimmer {
+  0%, 100% { 
+    background-position: 0% 0%; 
+  }
+  50% { 
+    background-position: 100% 100%; 
+  }
+}
+
+@keyframes vine-grow {
+  0% { 
+    transform: scale(0.95) rotate(-1deg); 
+  }
+  50% { 
+    transform: scale(1.02) rotate(1deg); 
+  }
+  100% { 
+    transform: scale(0.95) rotate(-1deg); 
+  }
+}
+
+/* Apply subtle breathing animation to all botanical decorations */
+.hero-btn::before,
+.course-btn::before,
+.proposal-btn::before,
+.decor-btn::before,
+.decor-btn-large::before,
+.footer-btn::before {
+  animation: botanical-breathe 6s ease-in-out infinite;
+}
+
+/* Special hover animations for enhanced interactivity */
+.hero-btn:hover::before {
+  animation: floral-shimmer 2s ease-in-out infinite, botanical-breathe 3s ease-in-out infinite;
+}
+
+.proposal-btn:hover::before {
+  animation: vine-grow 2.5s ease-in-out infinite;
+}
+
+.decor-btn-large:hover::before {
+  animation: botanical-breathe 1.5s ease-in-out infinite, floral-shimmer 4s ease-in-out infinite;
+}
+
+/* Seasonal Color Variations (Optional Classes) */
+.botanical-spring .hero-btn::before,
+.botanical-spring .course-btn::before,
+.botanical-spring .proposal-btn::before {
+  filter: hue-rotate(30deg) brightness(1.1);
+}
+
+.botanical-autumn .decor-btn::before,
+.botanical-autumn .decor-btn-large::before {
+  filter: hue-rotate(-15deg) saturate(1.2);
+}
+
+/* Legacy Elements Hover Effects */
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.service-item h3 a:hover {
+  color: #6F4E37;
+}
+
+/* Gallery Image Hover Effects */
+.gallery img:hover, 
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Social Media Icons Hover Effects */
+.social-icons a:hover img {
+  filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(340deg);
+}
+
+/* Mobile Navigation Toggle Animation */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  transition: 0.3s ease;
+}
+
+.nav-toggle.is-active .hamburger {
+  background: transparent;
+}
+
+.nav-toggle.is-active .hamburger::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.is-active .hamburger::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Console Command Hover (for showcase page) */
+.console-command:hover {
+  background: #333;
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-btn::before,
+  .course-btn::before,
+  .proposal-btn::before,
+  .decor-btn::before,
+  .decor-btn-large::before,
+  .footer-btn::before {
+    animation: none;
+  }
+  
+  .lang-btn::after,
+  .currency-btn::after {
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery img:hover, 
+  .gallery-container img:hover {
+    transform: none;
+  }
+  
+  .service-item:hover {
+    transform: none;
+  }
+}
+
+/* Focus States for Accessibility */
+.hero-btn:focus,
+.course-btn:focus,
+.proposal-btn:focus,
+.decor-btn:focus,
+.decor-btn-large:focus,
+.footer-btn:focus {
+  outline: 2px solid #C58E71;
+  outline-offset: 2px;
+}
+
+.lang-btn:focus,
+.currency-btn:focus {
+  outline: 2px solid #C58E71;
+  outline-offset: 2px;
+}

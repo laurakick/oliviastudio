@@ -1,0 +1,139 @@
+/* ==========================================
+   Button Base Styles
+   ========================================== */
+
+/* Hero Button */
+.hero-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #C58E71 0%, #AD7960 50%, #6F4E37 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 6px rgba(111, 78, 55, 0.15);
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #D49A82 0%, #C58E71 50%, #AD7960 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Course Button */
+.course-btn {
+  margin: 0 16px 16px 16px;
+  align-self: flex-start;
+  background: linear-gradient(45deg, #C58E71 0%, #B68461 50%, #A67752 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 6px rgba(111, 78, 55, 0.15);
+}
+
+.course-btn:hover {
+  background: linear-gradient(45deg, #D49A82 0%, #C58E71 50%, #B68461 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Proposal Button */
+.proposal-btn {
+  background: linear-gradient(90deg, #C58E71 0%, #AD7960 30%, #6F4E37 70%, #8B6B47 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  width: fit-content;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 6px rgba(111, 78, 55, 0.15);
+}
+
+.proposal-btn:hover {
+  background: linear-gradient(90deg, #D49A82 0%, #C58E71 30%, #AD7960 70%, #9A785A 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Decoration Button */
+.decor-btn {
+  background: linear-gradient(135deg, #C58E71 0%, #A67752 40%, #8B6B47 80%, #6F4E37 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 6px rgba(111, 78, 55, 0.15);
+}
+
+.decor-btn:hover {
+  background: linear-gradient(135deg, #D49A82 0%, #B68461 40%, #9A785A 80%, #AD7960 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Large Decoration Button */
+.decor-btn-large {
+  background: linear-gradient(45deg, #C58E71 0%, #B68461 25%, #A67752 50%, #8B6B47 75%, #6F4E37 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 3px 8px rgba(111, 78, 55, 0.2);
+}
+
+.decor-btn-large:hover {
+  background: linear-gradient(45deg, #D49A82 0%, #C58E71 25%, #B68461 50%, #9A785A 75%, #AD7960 100%);
+  box-shadow: 0 4px 12px rgba(111, 78, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Footer Button */
+.footer-btn {
+  background: linear-gradient(90deg, #C58E71 0%, #B68461 50%, #A67752 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 4px 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 2px 6px rgba(111, 78, 55, 0.15);
+}
+
+.footer-btn:hover {
+  background: linear-gradient(90deg, #D49A82 0%, #C58E71 50%, #B68461 100%);
+  box-shadow: 0 3px 10px rgba(111, 78, 55, 0.25);
+  transform: translateY(-1px);
+}
