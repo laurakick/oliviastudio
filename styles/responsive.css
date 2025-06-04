@@ -165,10 +165,14 @@
   .proposal-item.reverse .proposal-content {
     text-align: left;
   }
-  
-  .proposal-image {
+    .proposal-image {
     height: 300px;
     margin-bottom: 24px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    width: 100% !important;
   }
 }
 
@@ -177,10 +181,14 @@
     display: flex;
     flex-direction: column;
   }
-  
-  .proposal-image {
+    .proposal-image {
     height: 250px;
     margin-bottom: 24px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    width: 100% !important;
   }
   
   .proposal-title {

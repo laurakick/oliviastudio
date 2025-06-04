@@ -756,6 +756,9 @@ button {
   border-radius: 8px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
 }
 .proposal-content {
   display: flex;
@@ -921,6 +924,11 @@ button {
   .proposal-image {
     height: 300px;
     margin-bottom: 24px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    width: 100% !important;
   }
 }
 @media (max-width: 767px) {
@@ -931,6 +939,11 @@ button {
   .proposal-image {
     height: 250px;
     margin-bottom: 24px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    width: 100% !important;
   }
   .proposal-title {
     font-size: 24px;

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile 美學提案 Fix Test</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Simulate mobile screen */
+        body {
+            max-width: 375px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            padding: 10px;
+        }
+        
+        .test-header {
+            background: #2F4F4F;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        .status-check {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .status-check.error {
+            background: #ffeaea;
+            border-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>🔧 Mobile 美學提案 Fix Test</h1>
+        <p>Screen Width: <span id="width">375px</span></p>
+        <p>Testing proposal images on mobile devices</p>
+    </div>
+
+    <div class="status-check">
+        <strong>✅ Fixed Issues:</strong>
+        <ul>
+            <li>Added <code>background-repeat: no-repeat !important</code></li>
+            <li>Added <code>display: block !important</code></li>
+            <li>Added <code>width: 100% !important</code></li>
+            <li>Enhanced <code>background-size: cover !important</code></li>
+            <li>Enhanced <code>background-position: center !important</code></li>
+        </ul>
+    </div>
+
+    <section id="proposals" class="proposals-section">
+        <div class="container">
+            <h2 class="section-heading">美學提案</h2>
+            
+            <!-- Proposal 1: 花藝設計服務 -->
+            <div class="proposal-item">
+                <div class="proposal-image" style="background-image: url('image/S__14352440.jpg');"></div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">
+                        花藝設計服務<br /><span class="en-subtitle">Floral Design Services</span>
+                    </h3>
+                    <p class="proposal-text">
+                        提供專業的花藝設計服務，為您的特殊場合創造獨特的花卉裝飾。<br />
+                        從概念發想到實際製作，我們用心為每一個委託案打造專屬的美學體驗。
+                    </p>
+                    <a href="services.html" class="proposal-btn">了解更多</a>
+                </div>
+            </div>
+
+            <!-- Proposal 2: 課程花絮 -->
+            <div class="proposal-item reverse">
+                <div class="proposal-image" style="background-image: url('image/Olivia_Teacher.png');"></div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">
+                        課程花絮<br /><span class="en-subtitle">Class Gallery</span>
+                    </h3>
+                    <p class="proposal-text">
+                        記錄學員們在課堂中的精彩時刻與美麗作品。<br />
+                        每一張照片都訴說著花藝學習的快樂與成長，見證每個人與花的美好相遇。
+                    </p>
+                    <a href="gallery.html" class="proposal-btn">進入</a>
+                </div>
+            </div>
+
+            <!-- Proposal 3: 作品集 -->
+            <div class="proposal-item">
+                <div class="proposal-image" style="background-image: url('image/Hero.png');"></div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">
+                        精選作品集<br /><span class="en-subtitle">Portfolio</span>
+                    </h3>
+                    <p class="proposal-text">
+                        欣賞我們的精美花藝創作作品，每一件作品都承載著獨特的設計理念。<br />
+                        從日常擺設到特殊場合裝飾，展現花藝的多樣魅力與無限可能。
+                    </p>
+                    <a href="portfolio.html" class="proposal-btn">探索更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="status-check">
+        <strong>📱 Mobile Test Results:</strong>
+        <ul id="test-results">
+            <li>Loading test results...</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.proposal-image');
+            const results = document.getElementById('test-results');
+            const testResults = [];
+
+            // Clear loading message
+            results.innerHTML = '';
+
+            images.forEach((img, index) => {
+                const computedStyle = window.getComputedStyle(img);
+                const bgImage = computedStyle.backgroundImage;
+                const height = computedStyle.height;
+                const display = computedStyle.display;
+                const width = computedStyle.width;
+                
+                const result = {
+                    index: index + 1,
+                    hasBackgroundImage: bgImage !== 'none',
+                    height: height,
+                    display: display,
+                    width: width,
+                    backgroundSize: computedStyle.backgroundSize,
+                    backgroundPosition: computedStyle.backgroundPosition,
+                    backgroundRepeat: computedStyle.backgroundRepeat
+                };
+
+                testResults.push(result);
+
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <strong>Image ${result.index}:</strong> 
+                    ${result.hasBackgroundImage ? '✅' : '❌'} Background Image | 
+                    Height: ${result.height} | 
+                    Display: ${result.display} | 
+                    Width: ${result.width}
+                `;
+                results.appendChild(li);
+            });
+
+            // Overall status
+            const allImagesVisible = testResults.every(r => r.hasBackgroundImage && r.display !== 'none');
+            const statusDiv = document.querySelector('.status-check:last-child');
+            if (allImagesVisible) {
+                statusDiv.style.background = '#e8f5e8';
+                statusDiv.style.borderColor = '#4caf50';
+            } else {
+                statusDiv.classList.add('error');
+            }
+
+            console.log('Mobile Test Results:', testResults);
+        });
+    </script>
+</body>
+</html>

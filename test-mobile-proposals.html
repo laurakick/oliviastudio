@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile 美學提案 Test</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Debug styles */
+        .debug-info {
+            background: yellow;
+            color: black;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid red;
+        }
+        
+        .proposal-image-debug {
+            border: 3px solid lime !important;
+            min-height: 200px !important;
+            background-color: rgba(255, 0, 0, 0.3) !important;
+        }
+        
+        /* Force visibility on mobile */
+        @media (max-width: 767px) {
+            .proposal-image {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                height: 250px !important;
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h2>Debug Info - Screen Width: <span id="screen-width"></span>px</h2>
+        <p>Testing proposal images on mobile screen sizes</p>
+    </div>
+
+    <section id="proposals" class="proposals-section">
+        <div class="container">
+            <h2 class="section-heading">美學提案 - Mobile Test</h2>
+            
+            <!-- Proposal 1: 花藝設計服務 -->
+            <div class="proposal-item">
+                <div class="proposal-image proposal-image-debug" style="background-image: url('image/S__14352440.jpg');">
+                    <div class="debug-info">Image 1: S__14352440.jpg</div>
+                </div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">花藝設計服務</h3>
+                    <p class="proposal-text">Testing image visibility on mobile</p>
+                </div>
+            </div>
+
+            <!-- Proposal 2: 課程花絮 -->
+            <div class="proposal-item reverse">
+                <div class="proposal-image proposal-image-debug" style="background-image: url('image/Olivia_Teacher.png');">
+                    <div class="debug-info">Image 2: Olivia_Teacher.png</div>
+                </div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">課程花絮</h3>
+                    <p class="proposal-text">Testing image visibility on mobile</p>
+                </div>
+            </div>
+
+            <!-- Proposal 3: 作品集 -->
+            <div class="proposal-item">
+                <div class="proposal-image proposal-image-debug" style="background-image: url('image/Hero.png');">
+                    <div class="debug-info">Image 3: Hero.png</div>
+                </div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">精選作品集</h3>
+                    <p class="proposal-text">Testing image visibility on mobile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('screen-width').textContent = window.innerWidth;
+        
+        // Log image loading status
+        const images = document.querySelectorAll('.proposal-image');
+        images.forEach((img, index) => {
+            const bgImage = window.getComputedStyle(img).backgroundImage;
+            console.log(`Image ${index + 1} background-image:`, bgImage);
+            
+            // Check if background image loads
+            if (bgImage && bgImage !== 'none') {
+                const imageUrl = bgImage.slice(5, -2); // Remove 'url("' and '")'
+                const testImg = new Image();
+                testImg.onload = () => console.log(`Image ${index + 1} loaded successfully:`, imageUrl);
+                testImg.onerror = () => console.log(`Image ${index + 1} failed to load:`, imageUrl);
+                testImg.src = imageUrl;
+            }
+        });
+
+        // Update screen width on resize
+        window.addEventListener('resize', () => {
+            document.getElementById('screen-width').textContent = window.innerWidth;
+        });
+    </script>
+</body>
+</html>

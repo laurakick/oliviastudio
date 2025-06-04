@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile 美學提案 Images Test - Live Server</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Test panel styles */
+        .test-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px;
+            z-index: 9999;
+            font-size: 12px;
+            border-bottom: 3px solid #C58E71;
+        }
+        
+        .test-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .test-button {
+            background: #C58E71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+        
+        .test-button:hover {
+            background: #AD7960;
+        }
+        
+        .status-indicator {
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .status-ok { background: green; }
+        .status-warning { background: orange; }
+        .status-error { background: red; }
+        
+        /* Add margin to avoid overlap with fixed panel */
+        body {
+            margin-top: 80px !important;
+        }
+        
+        /* Viewport size indicator */
+        .viewport-info {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(47, 79, 79, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 9998;
+        }
+        
+        /* Image debug overlay */
+        .proposal-image-debug {
+            position: relative;
+        }
+        
+        .proposal-image-debug::after {
+            content: attr(data-image-status);
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            pointer-events: none;
+        }
+        
+        /* Mobile specific tests */
+        @media (max-width: 767px) {
+            .mobile-only-indicator {
+                display: block !important;
+                background: lime;
+                color: black;
+                text-align: center;
+                padding: 5px;
+                font-weight: bold;
+            }
+        }
+        
+        .mobile-only-indicator {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Control Panel -->
+    <div class="test-panel">
+        <div class="test-controls">
+            <strong>Live Server Port 5500 - Mobile Test:</strong>
+            <button class="test-button" onclick="testMobile()">📱 Mobile (375px)</button>
+            <button class="test-button" onclick="testTablet()">📱 Tablet (768px)</button>
+            <button class="test-button" onclick="testDesktop()">🖥️ Desktop (1200px)</button>
+            <button class="test-button" onclick="checkImages()">🔍 Check Images</button>
+            <span id="image-status" class="status-indicator">Checking...</span>
+            <span id="viewport-status" class="status-indicator">Screen: <span id="current-width"></span>px</span>
+        </div>
+    </div>
+
+    <!-- Mobile indicator -->
+    <div class="mobile-only-indicator">
+        📱 MOBILE MODE ACTIVE - Proposal images should be visible!
+    </div>
+
+    <!-- Viewport size indicator -->
+    <div class="viewport-info">
+        Viewport: <span id="viewport-width"></span> × <span id="viewport-height"></span>
+    </div>
+
+    <section id="proposals" class="proposals-section fade-in-section">
+        <div class="container">
+            <h2 class="section-heading">美學提案 - Mobile Test (Port 5500)</h2>
+            
+            <!-- Proposal 1: 花藝設計服務 -->
+            <div class="proposal-item">
+                <div 
+                    class="proposal-image proposal-image-debug" 
+                    style="background-image: url('image/S__14352440.jpg');"
+                    data-image-path="image/S__14352440.jpg"
+                    data-image-status="Loading...">
+                </div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">
+                        花藝設計服務<br /><span class="en-subtitle">Floral Design Services</span>
+                    </h3>
+                    <p class="proposal-text">
+                        提供專業的花藝設計服務，為您的特殊場合創造獨特的花卉裝飾。<br />
+                        從概念發想到實際製作，我們用心為每一個委託案打造專屬的美學體驗。
+                    </p>
+                    <a href="services.html" class="proposal-btn">了解更多</a>
+                </div>
+            </div>
+
+            <!-- Proposal 2: 課程花絮 -->
+            <div class="proposal-item reverse">
+                <div 
+                    class="proposal-image proposal-image-debug" 
+                    style="background-image: url('image/Olivia_Teacher.png');"
+                    data-image-path="image/Olivia_Teacher.png"
+                    data-image-status="Loading...">
+                </div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">
+                        課程花絮<br /><span class="en-subtitle">Class Gallery</span>
+                    </h3>
+                    <p class="proposal-text">
+                        記錄學員們在課堂中的精彩時刻與美麗作品。<br />
+                        每一張照片都訴說著花藝學習的快樂與成長，見證每個人與花的美好相遇。
+                    </p>
+                    <a href="gallery.html" class="proposal-btn">進入</a>
+                </div>
+            </div>
+
+            <!-- Proposal 3: 作品集 -->
+            <div class="proposal-item">
+                <div 
+                    class="proposal-image proposal-image-debug" 
+                    style="background-image: url('image/Hero.png');"
+                    data-image-path="image/Hero.png"
+                    data-image-status="Loading...">
+                </div>
+                <div class="proposal-content">
+                    <h3 class="proposal-title">
+                        精選作品集<br /><span class="en-subtitle">Portfolio</span>
+                    </h3>
+                    <p class="proposal-text">
+                        欣賞我們的精美花藝創作作品，每一件作品都承載著獨特的設計理念。<br />
+                        從日常擺設到特殊場合裝飾，展現花藝的多樣魅力與無限可能。
+                    </p>
+                    <a href="portfolio.html" class="proposal-btn">探索更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Update viewport info
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('viewport-width').textContent = width;
+            document.getElementById('viewport-height').textContent = height;
+            document.getElementById('current-width').textContent = width;
+            
+            // Update viewport status
+            const statusEl = document.getElementById('viewport-status');
+            if (width <= 767) {
+                statusEl.className = 'status-indicator status-ok';
+                statusEl.innerHTML = `📱 Mobile: ${width}px`;
+            } else if (width <= 1023) {
+                statusEl.className = 'status-indicator status-warning';
+                statusEl.innerHTML = `📱 Tablet: ${width}px`;
+            } else {
+                statusEl.className = 'status-indicator';
+                statusEl.innerHTML = `🖥️ Desktop: ${width}px`;
+            }
+        }
+
+        // Test different viewport sizes
+        function testMobile() {
+            // This is for manual testing - user should resize browser or use dev tools
+            alert('请将浏览器窗口调整到375px宽度，或使用开发者工具切换到手机视图');
+        }
+
+        function testTablet() {
+            alert('请将浏览器窗口调整到768px宽度，或使用开发者工具切换到平板视图');
+        }
+
+        function testDesktop() {
+            alert('请将浏览器窗口调整到1200px宽度，或使用开发者工具切换到桌面视图');
+        }
+
+        // Check image loading status
+        function checkImages() {
+            const images = document.querySelectorAll('.proposal-image-debug');
+            let loadedCount = 0;
+            let totalCount = images.length;
+
+            images.forEach((imgEl, index) => {
+                const imagePath = imgEl.getAttribute('data-image-path');
+                const bgImage = window.getComputedStyle(imgEl).backgroundImage;
+                
+                if (bgImage && bgImage !== 'none') {
+                    // Extract URL from background-image
+                    const imageUrl = bgImage.slice(5, -2).replace(/"/g, '');
+                    
+                    // Test if image loads
+                    const testImg = new Image();
+                    testImg.onload = function() {
+                        imgEl.setAttribute('data-image-status', '✅ OK');
+                        loadedCount++;
+                        updateImageStatus(loadedCount, totalCount);
+                        console.log(`✅ Image ${index + 1} loaded: ${imagePath}`);
+                    };
+                    testImg.onerror = function() {
+                        imgEl.setAttribute('data-image-status', '❌ ERROR');
+                        updateImageStatus(loadedCount, totalCount);
+                        console.log(`❌ Image ${index + 1} failed: ${imagePath}`);
+                    };
+                    testImg.src = imageUrl;
+                } else {
+                    imgEl.setAttribute('data-image-status', '❌ NO BG');
+                    console.log(`❌ No background image found for: ${imagePath}`);
+                }
+            });
+        }
+
+        function updateImageStatus(loaded, total) {
+            const statusEl = document.getElementById('image-status');
+            if (loaded === total) {
+                statusEl.className = 'status-indicator status-ok';
+                statusEl.textContent = `✅ All ${total} images OK`;
+            } else {
+                statusEl.className = 'status-indicator status-warning';
+                statusEl.textContent = `🔄 ${loaded}/${total} loaded`;
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateViewportInfo();
+            setTimeout(checkImages, 1000); // Check images after 1 second
+        });
+
+        // Update on resize
+        window.addEventListener('resize', updateViewportInfo);
+
+        // Log CSS media query status
+        function logMediaQueryStatus() {
+            const isMobile = window.matchMedia('(max-width: 767px)').matches;
+            const isTablet = window.matchMedia('(max-width: 1023px)').matches;
+            
+            console.log('📊 Media Query Status:');
+            console.log(`  Mobile (≤767px): ${isMobile}`);
+            console.log(`  Tablet (≤1023px): ${isTablet}`);
+            console.log(`  Current width: ${window.innerWidth}px`);
+        }
+
+        // Log media queries on load and resize
+        document.addEventListener('DOMContentLoaded', logMediaQueryStatus);
+        window.addEventListener('resize', logMediaQueryStatus);
+    </script>
+</body>
+</html>
