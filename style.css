@@ -419,8 +419,8 @@ button {
     font-size: 22px;
   }
   .hero-btn {
-    width: 100%;
-    max-width: 200px;
+    width: 80%;
+    max-width: 160px;
   }
 }
 
