@@ -23,6 +23,19 @@ function loadHeaderComponent() {
             
             // Initialize scroll behavior
             initScrollBehavior();
+
+            // Add event listener for mobile navigation toggle
+            const navToggle = document.querySelector(".nav-toggle");
+            const mainNav = document.querySelector(".main-nav");
+            console.log("navToggle element:", navToggle);
+            console.log("mainNav element:", mainNav);
+            if (navToggle && mainNav) {
+                navToggle.addEventListener("click", () => {
+                    mainNav.classList.toggle("nav-open");
+                    navToggle.classList.toggle("is-active");
+                    console.log("nav-open class toggled:", mainNav.classList.contains("nav-open"));
+                });
+            }
         })
         .catch(error => {
             console.error('Error loading header:', error);
@@ -95,16 +108,6 @@ function initScrollBehavior() {
 
 // Modern animations for new design
 document.addEventListener("DOMContentLoaded", () => {
-  /* Mobile Navigation Toggle */
-  const navToggle = document.querySelector(".nav-toggle");
-  const mainNav = document.querySelector(".main-nav");
-  if (navToggle && mainNav) {
-    navToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("nav-open");
-      navToggle.classList.toggle("is-active");
-    });
-  }
-
   /* Dropdown Menus for Language & Currency */
   document.addEventListener("click", (e) => {
     const langBtn = document.querySelector(".lang-btn");
