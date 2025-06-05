@@ -1117,7 +1117,7 @@ footer:not(.site-footer) {
 /* Legacy Responsive Design */
 @media (max-width: 768px) {
     header:not(.site-header) nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     
