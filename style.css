@@ -1151,11 +1151,7 @@ nav ul {
     transition: all 0.3s ease;
 }
 
-/* Adjust navigation when scrolled */
-header.scrolled nav ul {
-    margin-left: 200px; /* Space for logo */
-    text-align: left;
-}
+
 
 nav li {
     display: inline-block;
