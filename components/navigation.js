@@ -10,34 +10,14 @@ class NavigationComponent {
         </div>
         <nav class="main-nav">
           <ul class="nav-list">
-            <li>
-              <a href="about.html">關於我們</a>
-              <ul style="display:none" class="submenu">
-                <li><a href="about.html#brand-story">品牌故事</a></li>
-                <li><a href="about.html#founder">創辦人介紹</a></li>
-              </ul>
-            </li>
+            <li><a href="about.html">關於</a></li>
             <li><a href="courses.html">課程</a></li>
             <li><a href="services.html">花藝設計</a></li>
-            <li><a href="portfolio.html">活動餐會佈置</a></li>
-            <li><a href="contact.html">聯絡我們</a></li>
+            <li><a href="portfolio.html">活動佈置</a></li>
+            <li><a href="contact.html">聯絡</a></li>
           </ul>
         </nav>
         <div class="header-controls">
-          <div style="display:none" class="language-selector">
-            <button class="lang-btn" data-button-component="language" data-button-id="header-language">繁體中文 ▾</button>
-            <ul  class="lang-menu">
-              <li><a href="?lang=en">English</a></li>
-              <li><a href="?lang=zh-TW">繁體中文</a></li>
-            </ul>
-          </div>
-          <div style="display:none" class="currency-selector">
-            <button class="currency-btn" data-button-component="currency" data-button-id="header-currency">$ TWD ▾</button>
-            <ul class="currency-menu">
-              <li><a href="?currency=USD">$ USD</a></li>
-              <li><a href="?currency=TWD">$ TWD</a></li>
-            </ul>
-          </div>
           <button class="nav-toggle" aria-label="Toggle navigation">
             <span class="hamburger"></span>
           </button>
@@ -64,28 +44,6 @@ class NavigationComponent {
         navToggle.classList.toggle("is-active");
       });
     }
-
-    // Dropdown Menus for Language & Currency
-    document.addEventListener("click", (e) => {
-      const langBtn = document.querySelector(".lang-btn");
-      const langMenu = document.querySelector(".lang-menu");
-      const currencyBtn = document.querySelector(".currency-btn");
-      const currencyMenu = document.querySelector(".currency-menu");
-
-      if (e.target.closest(".lang-btn")) {
-        langMenu.classList.toggle("open");
-        if (currencyMenu) currencyMenu.classList.remove("open");
-      } else if (!e.target.closest(".language-selector")) {
-        if (langMenu) langMenu.classList.remove("open");
-      }
-
-      if (e.target.closest(".currency-btn")) {
-        currencyMenu.classList.toggle("open");
-        if (langMenu) langMenu.classList.remove("open");
-      } else if (!e.target.closest(".currency-selector")) {
-        if (currencyMenu) currencyMenu.classList.remove("open");
-      }
-    });
   }
 }
 
